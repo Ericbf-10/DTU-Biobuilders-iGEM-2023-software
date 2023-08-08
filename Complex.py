@@ -68,8 +68,8 @@ class Chain(object):
             else:
                 pass
         self.start -= self.length - length
-	self.start_history -= 0 #self.length - length
-	self.element = [self.start, self.start + 1, self.start + self.length]
+        self.start_history -= 0 #self.length - length
+        self.element = [self.start, self.start + 1, self.start + self.length]
     
     ## Loads a sequence into the chain, overriding all previous sequences.
     #  Afterwards, call Complex.build() on your complex!
@@ -119,14 +119,14 @@ class Chain(object):
     #  specifies, whether positions IN, or OUTSIDE the element should be rotated    
     def rotate_element(self, element, angle, reverse=False):
         revised_element = element[:]
-	rev = reverse
+        rev = reverse
         if rev:
             if revised_element[2] == None:
                 revised_element[2] = 0
             # Blocks reversed rotation, if element[2] not None
             else:
                 revised_element[2] = revised_element[1]
-		rev = False
+        rev = False
             
         if len(revised_element) == 3 and revised_element[2] != None:
             revised_element = [index + self.start for index in revised_element]
@@ -152,21 +152,21 @@ class Chain(object):
         element = self.structure.rotating_elements[self.sequence_array[revised_residue_index]][residue_element_index]
         #LOOK HERE!!!!!!!!!!!!! 
         for i in range(len(element)):
-	    if element[i] and element[i] < 0:
-                element[i] += self.structure.residue_length[self.sequence_array[revised_residue_index]]
-        if element[2] == None:
-            revised_element = [element[0]+self.residues_start[revised_residue_index], element[1]+self.residues_start[revised_residue_index], None]
-        elif element[2] == 0:
-            revised_element = [element[0]+self.residues_start[revised_residue_index],
-                               element[1]+self.residues_start[revised_residue_index],
-                               element[2]]
-        else:
-            revised_element = [element[0]+self.residues_start[revised_residue_index],
-                               element[1]+self.residues_start[revised_residue_index],
-                               element[2]+self.residues_start[revised_residue_index]]
-            rev = False
-        ##print("Revised Element: %s"%revised_element)
-        self.rotate_element(revised_element, angle, reverse=rev)
+            if element[i] and element[i] < 0:
+                    element[i] += self.structure.residue_length[self.sequence_array[revised_residue_index]]
+            if element[2] == None:
+                revised_element = [element[0]+self.residues_start[revised_residue_index], element[1]+self.residues_start[revised_residue_index], None]
+            elif element[2] == 0:
+                revised_element = [element[0]+self.residues_start[revised_residue_index],
+                                element[1]+self.residues_start[revised_residue_index],
+                                element[2]]
+            else:
+                revised_element = [element[0]+self.residues_start[revised_residue_index],
+                                element[1]+self.residues_start[revised_residue_index],
+                                element[2]+self.residues_start[revised_residue_index]]
+                rev = False
+            ##print("Revised Element: %s"%revised_element)
+            self.rotate_element(revised_element, angle, reverse=rev)
     
     ## rotate_historic_element
     #  deprecated!
@@ -446,12 +446,12 @@ class Complex(object):
         new_sequence_array = chain.structure.translate(sequence).split(' ')
         #Get the current positions
         current_positions = self.positions[:]
-	#Get current residue starts
-	current_residues_start = chain.residues_start[:]
-	#Get current chain starts
-	current_chain_start = chain.start
-	#Get current element
-	current_chain_element = chain.element[:]
+        #Get current residue starts
+        current_residues_start = chain.residues_start[:]
+        #Get current chain starts
+        current_chain_start = chain.start
+        #Get current element
+        current_chain_element = chain.element[:]
         #Build new sequence
         chain.create_sequence(sequence)
         #Rebuild the complex, excluding the chain to be fit
@@ -463,8 +463,8 @@ class Complex(object):
         angle = ang(nostrom(vec0),nostrom(vec1))
         global_axis = mm.Vec3(*np.cross(np.asarray(nostrom(vec0)), np.asarray(nostrom(vec1)))) * unit.angstrom
         if (np.asarray(nostrom(global_axis)) == np.array([0.,0.,0.])).all():
-		global_axis = mm.Vec3(1.,0.,0.)*unit.angstrom
-		angle = 0.
+            global_axis = mm.Vec3(1.,0.,0.)*unit.angstrom
+            angle = 0.
 	#Rotate chain to fit first rotable bond
         ##print("chain element: %s"%chain.element)
         self.rotate_global(chain.element, global_axis, -angle)
@@ -473,15 +473,15 @@ class Complex(object):
             for element_id, (element, element_current) in enumerate(zip(chain.structure.rotating_elements[residue],
 									chain.structure.rotating_elements[residue_current])):
                 ##print(element)
-		revised0 = element[0]+chain.start+chain.residues_start[residue_id]
+                revised0 = element[0]+chain.start+chain.residues_start[residue_id]
                 revised1 = element[1]+chain.start+chain.residues_start[residue_id]
                 revised0_current = element_current[0]+current_chain_start+current_residues_start[residue_id]
                 revised1_current = element_current[1]+current_chain_start+current_residues_start[residue_id]
                 axis = self.positions[revised1] - self.positions[revised0]
-		if not np.linalg.norm(np.asarray(nostrom(axis))) == 0:
-	                axis /= np.linalg.norm(np.asarray(nostrom(axis)))
-		else:
-			axis = mm.Vec3(1.,0.,0.)
+                if not np.linalg.norm(np.asarray(nostrom(axis))) == 0:
+                    axis /= np.linalg.norm(np.asarray(nostrom(axis)))
+                else:
+                    axis = mm.Vec3(1.,0.,0.)
                 #Bond to next-to-nearest neighbour along increasing indices in the element
                 vec0 = self.positions[revised1+1] - self.positions[revised1]
                 vec1 = current_positions[revised1_current+1] - current_positions[revised1_current]
@@ -503,10 +503,10 @@ class Complex(object):
         new_sequence_array = chain.structure.translate(sequence).split(' ')
         #Get the current positions
         current_positions = self.positions[:]
-	#Get current residue starts
-	current_residues_start = chain.residues_start[:]
-	#Get current chain starts
-	current_chain_start = chain.start
+        #Get current residue starts
+        current_residues_start = chain.residues_start[:]
+        #Get current chain starts
+        current_chain_start = chain.start
         #Build new sequence
         chain.create_sequence(sequence)
         #Rebuild the complex, excluding the chain to be fit

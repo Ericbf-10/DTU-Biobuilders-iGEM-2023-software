@@ -96,7 +96,7 @@ class Structure(object):
                     revised_end += self.residue_length[residue]
                 self.backbone_elements[residue] = [[revised_start, revised_middle_pre, bond], [revised_middle_post, revised_end]]
 
-    def add_rotation(self, residue_name, rotations):
+    def add_rotation(self, residue_name, rotations, basestring):
         """
             add_rotation:
             -------------

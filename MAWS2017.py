@@ -131,9 +131,9 @@ for ntide in 'GAUC':
 	#Initialize the chain with a nucleotide
 	aptamer.create_sequence(ntide)
 	#Build the Complex
-        print("INTO LEAP ---------------------------------------------------------------------")
+	print("INTO LEAP ---------------------------------------------------------------------")
 	complex.build()
-        print("OUT OF LEAP -------------------------------------------------------------------")
+	print("OUT OF LEAP -------------------------------------------------------------------")
 	#Remember its initial positions
 	positions0 = complex.positions[:]
 	#For the number of samples
@@ -206,9 +206,9 @@ for i in range(N_NTIDES):
 			#Get our aptamer
 			aptamer = complex.chains[0]
 			aptamer.create_sequence(best_old_sequence)
-                        print("INTO LEAP ------------------------------------------------------------------------------")
+			print("INTO LEAP ------------------------------------------------------------------------------")
 			complex.build()
-                        print("OUT OF LEAP ----------------------------------------------------------------------------")
+			print("OUT OF LEAP ----------------------------------------------------------------------------")
 			#Readjust positions
 			complex.positions = best_old_positions[:]
 			if append:
@@ -217,9 +217,9 @@ for i in range(N_NTIDES):
 			else:
 				#Prepend new nucleotide
 				aptamer.prepend_sequence(ntide)
-                        print("INTO LEAP ------------------------------------------------------------------------------")
+			print("INTO LEAP ------------------------------------------------------------------------------")
 			complex.rebuild()
-                        print("OUT OF LEAP ----------------------------------------------------------------------------")
+			print("OUT OF LEAP ----------------------------------------------------------------------------")
 			## Optionally minimize or "shake" complex, to find lower energy local minimum
 			#not recommended! causes issues with proteins
 			#complex.minimize()
@@ -277,7 +277,6 @@ for i in range(N_NTIDES):
 	app.PDBFile.writeModel(best_topology, best_positions, file=pdblog, modelIndex=1)
 	pdblog.close()
 
-
 #Render resulting aptamer to pdb
 result_complex = copy.deepcopy(cpx)
 aptamer = result_complex.chains[0]
@@ -290,7 +289,6 @@ pdb_result.close()
 
 output.write("{0}: Run completed. Thank you for using MAWS!\n\n".format(str(datetime.now())))
 output.write("Final sequence: {0}\n".format(best_sequence))
-
 
 #Garbage collection
 step.close()

@@ -75,7 +75,7 @@ class Box(Space):
     def generator(self):
         axis = np.random.uniform(-1,1,3)
         x,y,z = axis/np.linalg.norm(axis)
-        protation_angle = np.random.uniform(0, np.math.pi)
+        rotation_angle = np.random.uniform(0, np.math.pi)
         return np.array([np.random.uniform(self.centre[0]-self.x_width/2, self.centre[0]+self.x_width/2),
                        np.random.uniform(self.centre[1]-self.y_width/2, self.centre[1]+self.y_width/2),
                        np.random.uniform(self.centre[2]-self.z_width/2, self.centre[2]+self.z_width/2),
@@ -116,9 +116,10 @@ class Sphere(Space):
     def generator(self):
         axis = np.random.uniform(-1,1,3)
         x,y,z = axis/np.linalg.norm(axis)
-        r = np.random.uniform(0,radius)
+        r = np.random.uniform(0,self.radius)
         phi = np.random.uniform(0, 2*np.math.pi)
         psi = np.random.uniform(0, np.math.pi)
+        rotation_angle = np.random.uniform(0, np.math.pi)
         result = r*np.array([np.math.cos(phi)*np.math.sin(psi),
                              np.math.sin(phi)*np.math.sin(psi),
                              np.math.cos(psi), x, y, z,
@@ -183,15 +184,15 @@ class EnergySampler(Sampler):
         self.positions = self.inpcrd.positions[:]
         self.topology = self.prmtop.topology
         self.ligand_range = Complex.ligand_range
-        self.aptamer_positions = self.positions[ligand_range[1]-1:]
-        self.ligand_positions = self.positions[:ligand_range[1]]
+        self.aptamer_positions = self.positions[self.ligand_range[1]-1:]
+        self.ligand_positions = self.positions[:self.ligand_range[1]]
         self.system = self.prmtop.createSystem(nonbondedMethod=app.NoCutoff, constraints=None, implicitSolvent=app.OBC1)
         self.integrator = mm.LangevinIntegrator(300.*unit.kelvin, 1./unit.picosecond, 0.002*unit.picoseconds)
         self.simulation = app.Simulation(self.topology, self.system, self.integrator)
         
     # REVISE 
 
-    def transform_complex(transformation_array):
+    def transform_complex(self, transformation_array):
         shift_vector = transformation_array[:3]
         x,y,z = transformation_array[3:-1]
         phi_by_two = transformation_array[-1]/2.
@@ -213,7 +214,7 @@ class EnergySampler(Sampler):
     ##"private" function calculating energy of the complex 
     def energy_function(self):
         self.simulation.context.setPositions(self.positions)
-        state = simulation.context.getState(getPositions=True,getEnergy=True,groups=1)
+        state = self.simulation.context.getState(getPositions=True,getEnergy=True,groups=1)
         free_E = state.getPotentialEnergy().value_in_unit(unit.kilojoules_per_mole)
         return free_E, self.positions
     
@@ -261,7 +262,7 @@ class EnergyGridSampler(EnergySampler):
         
     def sample(self):
         transformation_array = self.grid[0]
-        np.delete(grid[0])
+        np.delete(self.grid[0])
         self.transform_complex(self.space.generator())
         energy_position = self.energy_function()
         if energy_position[0] < self.best_energy:
@@ -330,7 +331,7 @@ class Structure(object):
                 else:
                     self.rotating_elements[residue].append([start, bond, end])
 
-    def add_rotation(self, residue_name, rotations):
+    def add_rotation(self, residue_name, rotations, basestring):
         """
             add_rotation:
             -------------
@@ -347,7 +348,7 @@ class Structure(object):
             raise ValueError("The input supplied is not a three component list specifying a rotation!")
         return self.rotating_elements
     
-    def delete_rotation(self, residue_name, rotations):
+    def delete_rotation(self, residue_name, rotations, basestring):
         if isinstance(rotations[0],basestring):
             for rotation in rotations:
                 if rotation in self.rotating_elements[residue_name]:
@@ -750,16 +751,17 @@ class Complex(object):
     #get current complex energy
     def get_energy(self):
         self.simulation.context.setPositions(self.positions)
-        state = self.simulation.context.getState(getPositions=True,getEnergy=True,groups=1)
-        free_E = state.getPotentialEnergy().value_in_unit(unit.kilojoules_per_mole)
+        self.state = self.simulation.context.getState(getPositions=True,getEnergy=True,groups=1)
+        free_E = self.state.getPotentialEnergy().value_in_unit(unit.kilojoules_per_mole)
         return free_E, self.positions
     
     #Wrapper for OpenMM local energy minimization
     def minimize(self, max_iterations=500):
         self.simulation.context.setPositions(self.positions)
         self.simulation.minimizeEnergy(maxIterations=max_iterations)
+        self.state = self.simulation.context.getState(getPositions=True,getEnergy=True,groups=1)
         self.positions = self.simulation.context.getState(getPositions=True,getEnergy=True,groups=1).getPositions()
-        free_E = state.getPotentialEnergy().value_in_unit(unit.kilojoules_per_mole)
+        free_E = self.state.getPotentialEnergy().value_in_unit(unit.kilojoules_per_mole)
         return free_E
     
     #Introducing 'chain-wriggling' into the framework
@@ -772,7 +774,7 @@ class Complex(object):
 #Turn computation / sampler into functions? They are not very class-like, and functions would be easier to MPIify
 class Computation(object):
     
-    def __init__(Sampler, Complex, beta):
+    def __init__(self, Sampler, Complex, beta):
         self.sampler = Sampler
         self.complex = Complex
         self.positions = None
@@ -785,7 +787,7 @@ class Computation(object):
     
     #naively compute the partition function Z, probabilities P and entropy S of a given array of energies
     def naiveZPS(self):
-        P = np.exp(-beta*np.asarray(self.energies))
+        P = np.exp(-self.beta*np.asarray(self.energies))
         Z = P.sum()
         P /= Z
         S = -(np.log(P/len(P))*P).sum()
@@ -793,7 +795,7 @@ class Computation(object):
     
     #compute Z P and S by monte carlo integration
     def mcZPS(self, volume):
-        P = np.exp(-beta*np.asarray(self.energies))
+        P = np.exp(-self.beta*np.asarray(self.energies))
         Z = P.sum()/len(P)*volume
         P /= Z
         S = -(np.log(P/len(P))*P).sum()/len(P)*volume

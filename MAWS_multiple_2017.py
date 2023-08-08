@@ -132,9 +132,9 @@ for ntide in 'GAUC':
 	#Initialize the chain with a nucleotide
 	aptamer.create_sequence(ntide)
 	#Build the Complex
-        print("INTO LEAP ---------------------------------------------------------------------")
+	print("INTO LEAP ---------------------------------------------------------------------")
 	complex.build()
-        print("OUT OF LEAP -------------------------------------------------------------------")
+	print("OUT OF LEAP -------------------------------------------------------------------")
 	#Remember its initial positions
 	positions0 = complex.positions[:]
 	#For the number of samples
@@ -220,9 +220,9 @@ for i in range(N_NTIDES):
 				#Get our aptamer
 				aptamer = complex.chains[0]
 				aptamer.create_sequence(best_old_sequence)
-        	                print("INTO LEAP ------------------------------------------------------------------------------")
+				print("INTO LEAP ------------------------------------------------------------------------------")
 				complex.build()
-        	                print("OUT OF LEAP ----------------------------------------------------------------------------")
+				print("OUT OF LEAP ----------------------------------------------------------------------------")
 				#Readjust positions
 				complex.positions = best_old_position[:]
 				if append:
@@ -231,9 +231,9 @@ for i in range(N_NTIDES):
 				else:
 					#Prepend new nucleotide
 					aptamer.prepend_sequence(ntide)
-        	                print("INTO LEAP ------------------------------------------------------------------------------")
+				print("INTO LEAP ------------------------------------------------------------------------------")
 				complex.rebuild()
-        	                print("OUT OF LEAP ----------------------------------------------------------------------------")
+				print("OUT OF LEAP ----------------------------------------------------------------------------")
 				## Optionally minimize or "shake" complex, to find lower energy local minimum
 				#not recommended! causes issues with proteins
 				#complex.minimize()
@@ -285,11 +285,11 @@ for i in range(N_NTIDES):
 					best_sequences.append(aptamer.alias_sequence)
 					best_topologies.append(copy.deepcopy(complex.topology))
 				elif any(entropy < elem for elem in best_entropies):
-                			worst_entropy_index = min(enumerate(best_entropies), key=itemgetter(1))[0]
-                			best_entropies[worst_entropy_index] = entropy
-                			best_sequences[worst_entropy_index] = aptamer.alias_sequence
-                			best_positions[worst_entropy_index] = position[:]
-                			best_topologies[worst_entropy_index] = copy.deepcopy(complex.topology)
+					worst_entropy_index = min(enumerate(best_entropies), key=itemgetter(1))[0]
+					best_entropies[worst_entropy_index] = entropy
+					best_sequences[worst_entropy_index] = aptamer.alias_sequence
+					best_positions[worst_entropy_index] = position[:]
+					best_topologies[worst_entropy_index] = copy.deepcopy(complex.topology)
 
 	for idx in range(NKEEP):
 		app.PDBFile.writeModel(best_topologies[idx], best_positions[idx], file=step, modelIndex=1)

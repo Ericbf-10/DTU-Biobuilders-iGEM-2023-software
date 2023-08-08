@@ -14,16 +14,16 @@ def makeLib(file_path, residue_name, connect0=None, connect1=None, charges='bcc'
 	loadamberparams %s.frcmod"""%(force_field,
 		 residue_name, name, 
 		 lib_path) 
-        if connect0 and connect1:
-        	tleap_input += """
-		set %s head %s.1.%s
-		set %s tail %s.1.%s
-		set %s.1 connect0 %s.head
-		set %s.1 connect1 %s.tail"""%(residue_name, residue_name, connect0, 
-						residue_name, residue_name, connect1, 
-						residue_name, residue_name, 
-						residue_name, residue_name)
-	tleap_input +="""
+	if connect0 and connect1:
+		tleap_input += """
+	set %s head %s.1.%s
+	set %s tail %s.1.%s
+	set %s.1 connect0 %s.head
+	set %s.1 connect1 %s.tail"""%(residue_name, residue_name, connect0, 
+					residue_name, residue_name, connect1, 
+					residue_name, residue_name, 
+					residue_name, residue_name)
+	tleap_input += """
 	check %s
         saveoff %s %s.lib
 	savepdb %s %s_tmp.pdb

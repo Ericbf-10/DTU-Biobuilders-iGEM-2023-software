@@ -106,7 +106,7 @@ class Sphere(Space):
     def generator(self):
         axis = np.random.uniform(-1,1,3)
         x,y,z = axis/np.linalg.norm(axis)
-        r = np.random.uniform(0,radius)
+        r = np.random.uniform(0,self.radius)
         phi = np.random.uniform(0, 2*np.math.pi)
         psi = np.random.uniform(0, np.math.pi)
         rotation_angle = np.random.uniform(0, 2*np.math.pi)
