@@ -2,7 +2,7 @@ from Complex import Complex
 from Structure import Structure
 from LoadFrom import XMLStructure
 import numpy as np
-from simtk.openmm import app
+from openmm import app
 
 PROT = XMLStructure("PROT.xml")
 

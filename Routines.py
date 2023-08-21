@@ -7,6 +7,7 @@ def kullbackLeiblerDivergence(sample,reference_sample):
 	return -math.fsum(np.asarray(sample)*map(math.log,np.asarray(sample)/np.asarray(reference_sample)))
 
 def Entropy(sample):
+    sample = list(sample)
     return -math.fsum(map(math.fmul, np.asarray(sample), map(math.log, map(math.fmul, np.asarray(sample), [len(sample)]*len(sample)))))
 
 def GoodEnergy(energy, threshold):

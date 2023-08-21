@@ -1,9 +1,9 @@
 #Insert Parsers preferably here, plus load from PDB, load from mol2, etc.
 
-from simtk.openmm import app
+from openmm import app
 import Structure
-import simtk.openmm as mm
-from simtk import unit
+import openmm as mm
+from openmm import unit
 import xml.etree.ElementTree as et
 
 def XMLParseStructure(path):

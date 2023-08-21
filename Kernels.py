@@ -2,8 +2,8 @@
 
 from numba import jit
 import numpy as np
-from simtk.openmm import app
-from simtk import unit
+from openmm import app
+from openmm import unit
 
 def catchZero(numeric):
 	return numeric + 1e-50

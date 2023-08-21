@@ -1,5 +1,5 @@
 import numpy as np
-from simtk import unit
+from openmm import unit
 
 def angstrom(array):
     return array*unit.angstrom

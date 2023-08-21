@@ -1,4 +1,3 @@
-Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
 /zhome/2e/2/164651/iGEM/heidelberg_maws/Kernels.py:12: NumbaDeprecationWarning: The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
   def rotateKernel(positions, element, axis, angle):
 /zhome/2e/2/164651/iGEM/heidelberg_maws/Kernels.py:33: NumbaDeprecationWarning: The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
@@ -15,13 +14,7 @@ Warning: importing 'simtk.openmm' is deprecated.  Import 'openmm' instead.
   def ZPS(sample, beta=0.001):
 /zhome/2e/2/164651/iGEM/heidelberg_maws/Kernels.py:68: NumbaDeprecationWarning: The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
   def S(sample, beta=0.001):
-Traceback (most recent call last):
-  File "/zhome/2e/2/164651/iGEM/heidelberg_maws/MAWS2017.py", line 98, in <module>
-    cpx.add_chain_from_PDB(PDB_PATH,parameterized=False)
-  File "/zhome/2e/2/164651/iGEM/heidelberg_maws/Complex.py", line 227, in add_chain_from_PDB
-    length = makeLib(pdb, pdb_name, parameterized=parameterized)
-  File "/zhome/2e/2/164651/iGEM/heidelberg_maws/Prepare.py", line 56, in makeLib
-    PDB = app.PDBFile(lib_path + "_tmp.pdb")
-  File "/zhome/2e/2/164651/miniconda3/envs/maws_p3/lib/python3.9/site-packages/openmm/app/pdbfile.py", line 93, in __init__
-    inputfile = open(file)
-FileNotFoundError: [Errno 2] No such file or directory: 'PDB_tmp.pdb'
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/lib/python3.9/site-packages/openmm/app/internal/amber_file_parser.py:1165: UserWarning: Non-optimal GB parameters detected for GB model OBC1
+  warnings.warn(
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/lib/python3.9/site-packages/openmm/app/internal/amber_file_parser.py:1165: UserWarning: Non-optimal GB parameters detected for GB model OBC1
+  warnings.warn(
