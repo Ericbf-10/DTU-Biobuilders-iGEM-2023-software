@@ -7,7 +7,7 @@
                 loadoff ./PDB.lib
 		loadamberparams ./PDB.frcmod 
                 
-                                        CHAIN0 = sequence {C5 C C A C C3}
+                                        CHAIN0 = sequence {DA5 DA DG DA DT DT3}
                                         
                                         CHAIN1 = sequence {PDB}
                                         

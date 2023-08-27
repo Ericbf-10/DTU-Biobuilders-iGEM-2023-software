@@ -42,4 +42,4 @@ result=$(which python)
 echo "$result"
 
 # Run MAWS
-python MAWS2017.py -p pfoa.pdb -n maws_trash_aptamer -t 5
+python MAWS2017.py -p pfoa.pdb -n maws_trash_DNA_aptamer -nt 5 -t DNA

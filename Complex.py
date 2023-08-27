@@ -197,9 +197,9 @@ class Chain(object):
 ##Represents a complex containing multiple molecule chains.
 class Complex(object):
     
-    ## Specifies a complex by giving a force field governing it, defaulting to "leaprc.ff12SB"
+    ## Specifies a complex by giving a force field governing it, defaulting to "leaprc.protein.ff19SB_modAA"
     # @param force_field Specifies the force field governing the complex. 
-    def __init__(self, force_field="leaprc.ff12SB"):
+    def __init__(self, force_field="leaprc.protein.ff19SB_modAA"):
         self.build_string = """
                             source %s
                             source leaprc.gaff
@@ -223,8 +223,8 @@ class Complex(object):
             chainID = 0
         self.chains.append(Chain(self, structure, sequence=sequence, start=start, ID=chainID))
 
-    def add_chain_from_PDB(self, pdb, structure=None, pdb_name='PDB', parameterized=False):
-        length = makeLib(pdb, pdb_name, parameterized=parameterized)
+    def add_chain_from_PDB(self, pdb, force_field, structure=None, pdb_name='PDB', parameterized=False):
+        length = makeLib(pdb, pdb_name, force_field=force_field, parameterized=parameterized)
         path = '/'.join(pdb.split('/')[:-1])
         structure = Structure([pdb_name], residue_length=[length], residue_path=path)
         self.add_chain(pdb_name, structure)

@@ -4,7 +4,7 @@ from openmm import app
 
 ## makeLib
 # parametrizes a pdb or mol2 file to generate a .lib library file for tleap / nab
-def makeLib(file_path, residue_name, connect0=None, connect1=None, charges='bcc', atom_type='gaff', force_field='leaprc.ff12SB', parameterized=False):
+def makeLib(file_path, residue_name, connect0=None, connect1=None, charges='bcc', atom_type='gaff', force_field='leaprc.protein.ff19SB_modAA', parameterized=False):
 	name, extension = file_path.split('/')[-1].split(".")
 	lib_path = '/'.join(file_path.split('/')[:-1]+[residue_name])
 	tleap_input = """

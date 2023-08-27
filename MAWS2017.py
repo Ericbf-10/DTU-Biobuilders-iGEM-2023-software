@@ -6,6 +6,9 @@
 #VERSION Information
 #Note: This information should be updated with every technical change to ensure that
 #      every calculation can be linked to its software version.
+
+# Modifications were made by DTU Biobuilders in 2023
+
 VERSION = "2.0"
 RELEASE_DATE = "2017"
 METHOD = "Kullback-Leibler"
@@ -28,44 +31,27 @@ import Space
 
 #Parser
 parser = argparse.ArgumentParser()
-parser.add_argument("-n", "--name", help="Job name.")
-parser.add_argument("-b", "--beta", type=float,
-					help="Inverse temperature.")
-parser.add_argument("-c1", "--firstchunksize", type=int,
-					help="Number of samples in the first MAWS step.")
-parser.add_argument("-c2", "--secondchunksize", type=int,
-					help="Number of samples in all subsequent MAWS steps.")
-parser.add_argument("-t", "--ntides", type=int,
-					help="Number of nucleotides in the aptamer.")
-parser.add_argument("-p", "--path",
-					help="Path to your PDB file.")
+parser.add_argument("-n", "--name", type=str, default="GFP", help="Job name.")
+parser.add_argument("-b", "--beta", type=float, default=0.01, help="Inverse temperature.")
+parser.add_argument("-c1", "--firstchunksize", type=int, default=5000, help="Number of samples in the first MAWS step.")
+parser.add_argument("-c2", "--secondchunksize", type=int, default=5000, help="Number of samples in all subsequent MAWS steps.")
+parser.add_argument("-nt", "--ntides", type=int, default=15, help="Number of nucleotides in the aptamer.")
+parser.add_argument("-p", "--path", type=str, default="/net/data.isilon/ag-reils/igem2015/testenv/silane.pdb", help="Path to your PDB file.")
+parser.add_argument("-ta", "--aptamertype", type=str, default="RNA", help="Type of aptamer, can be either DNA or RNA.")
+parser.add_argument("-tm", "--moleculetype", type=str, default="organic", help="Type of ligand molecule, can be either protein, organic or lipid.")
 args = parser.parse_args()
 
 
 #PARAMS
-#Number of samples taken per step
-JOB_NAME = "GFP"
-if args.name:
-	JOB_NAME = args.name
-BETA = 0.01
-if args.beta:
-	BETA = args.beta
-FIRST_CHUNK_SIZE = 5000
-if args.firstchunksize:
-	FIRST_CHUNK_SIZE = args.firstchunksize
-CHUNK_SIZE = 5000
-if args.secondchunksize:
-	CHUNK_SIZE = args.secondchunksize
-N_NTIDES = 15
-if args.ntides:
-	N_NTIDES = args.ntides
-PDB_PATH = "/net/data.isilon/ag-reils/igem2015/testenv/silane.pdb"
-if args.path:
-	PDB_PATH = args.path
-#N_CHUNKS = 1
-#FUZZY = 1
-##Number of rotable junctions in DNA, to distinguish forward and backward rotation
-N_ELEMENTS = 4
+JOB_NAME = args.name
+BETA = args.beta
+FIRST_CHUNK_SIZE = args.firstchunksize
+CHUNK_SIZE = args.secondchunksize
+N_NTIDES = args.ntides
+PDB_PATH = args.path
+ATPAMER_TYPE = args.aptamertype
+MOLECULE_TYPE = args.moleculetype
+N_ELEMENTS = 4 # Number of rotable junctions in RNA/DNA, to distinguish forward and backward rotation
 
 
 #Open a pdb file, to monitor progress
@@ -77,6 +63,8 @@ step = open("{0}_step_cache.pdb".format(JOB_NAME), "w")
 output.write("MAWS - Making Aptamers With Software\n")
 output.write("Active version: {0} (released:_{1})\n".format(VERSION, RELEASE_DATE))
 output.write("Computational method: {0}\n".format(METHOD))
+output.write("Type of aptamer: {0}\n".format(ATPAMER_TYPE))
+output.write("Type of ligand molecule: {0}\n".format(MOLECULE_TYPE))
 output.write("Job: {0}\n".format(JOB_NAME))
 output.write("Input file: {0}\n".format(PDB_PATH))
 output.write("Sample number in initial step: {0}\n".format(FIRST_CHUNK_SIZE))
@@ -85,22 +73,41 @@ output.write("Number of further steps: {0} (sequence length = )\n".format(N_NTID
 output.write("Value of beta: {0}\n".format(BETA))
 output.write("Start time: {0}\n".format(str(datetime.now())))
 
-#Build Structure-object for DNA residues
-RNA = XMLStructure("RNA.xml")
+if ATPAMER_TYPE == "RNA":
+	xml_molecule = XMLStructure("RNA.xml") #Build Structure-object for RNA residues
+	nt_list = "GAUC"
+elif ATPAMER_TYPE == "DNA":
+	xml_molecule = XMLStructure("DNA.xml") #Build Structure-object for DNA residues
+	nt_list = "GATC"
+else: # Error handling
+	print("The type of aptamer was not properly set. It can only be DNA or RNA. Stopping the program.") #Option is not well defined, break program
+	exit()
+
+#Choose suitable force field file
+if MOLECULE_TYPE == "protein":
+	force_field_ligand = "leaprc.protein.ff19SB_modAA"
+elif MOLECULE_TYPE == "organic":
+	force_field_ligand = "leaprc.gaff2"
+elif MOLECULE_TYPE == "lipid":
+	force_field_ligand = "leaprc.lipid21"
+else: # Error handling
+	print("The type of molecule was not properly set. It can only be protein, organic or lipid. Stopping the program.") #Option is not well defined, break program
+	exit()
 
 #Instantiate the Complex for further computation
-cpx = Complex("leaprc.ff12SB")
+cpx = Complex(force_field_ligand)
+output.write("Force field selected for the ligand molecule: {0}\n".format(force_field_ligand))
 
-#Add an empty Chain to the Complex, of structure DNA
-cpx.add_chain('', RNA)
+#Add an empty Chain to the Complex, of structure RNA or DNA
+cpx.add_chain('', xml_molecule)
 
 #Add a chain to the complex using a pdb file (e.g. "xylanase.pdb")
-cpx.add_chain_from_PDB(PDB_PATH,parameterized=False)
+cpx.add_chain_from_PDB(PDB_PATH,force_field=force_field_ligand,parameterized=False)
 
 #Build a complex with the pdb only, to get center of mass of the pdb --#
-c = Complex("leaprc.ff12SB")
+c = Complex(force_field_ligand)
 
-c.add_chain_from_PDB(PDB_PATH,parameterized=False)
+c.add_chain_from_PDB(PDB_PATH,force_field=force_field_ligand,parameterized=False)
 
 c.build()
 #----------------------------------------------------------------------#
@@ -118,8 +125,8 @@ best_positions = None
 
 output.write("Initialized succesfully!\n")
 
-#for each nucleotide in GATC
-for ntide in 'GAUC':
+#for each nucleotide
+for ntide in nt_list:
 	output.write("{0}: starting initial step for '{1}'\n".format(str(datetime.now()),ntide))
 	energies = []
 	free_E = None
@@ -177,12 +184,13 @@ for ntide in 'GAUC':
 	if best_entropy == None or entropy < best_entropy:
 		best_entropy = entropy
 		best_sequence = ntide
+		best_ntide = ntide
 		best_positions = position[:]
 		best_topology = copy.deepcopy(complex.topology)
 
 app.PDBFile.writeModel(best_topology, best_positions, file=step, modelIndex=1)
 #Output best as well
-pdblog = open("{0}_best_1_{1}.pdb".format(JOB_NAME,ntide),"w")
+pdblog = open("{0}_best_1_{1}.pdb".format(JOB_NAME,best_ntide),"w")
 app.PDBFile.writeModel(best_topology, best_positions, file=pdblog, modelIndex=1)
 pdblog.close()
 
@@ -195,7 +203,7 @@ for i in range(N_NTIDES):
 	best_old_sequence = best_sequence
 	best_old_positions = best_positions[:]
 	best_entropy = None
-	for ntide in 'GAUC':
+	for ntide in nt_list:
 		#For append nucleotide or prepend nucleotide
 		for append in [True, False]:
 			energies = []
@@ -268,12 +276,13 @@ for i in range(N_NTIDES):
 			if best_entropy == None or entropy < best_entropy:
 				best_entropy = entropy
 				best_positions = position[:]
+				best_ntide = ntide
 				best_sequence = aptamer.alias_sequence
 				best_topology = copy.deepcopy(complex.topology)
 	app.PDBFile.writeModel(best_topology, best_positions, file=step, modelIndex=1)
 	#Output best as well
 	output.write("{0}: Completed step {1}. Selected sequence: {2}\n".format(str(datetime.now()), i+2, best_sequence))
-	pdblog = open("{0}_best_{1}_{2}.pdb".format(JOB_NAME, i+2, ntide),"w")
+	pdblog = open("{0}_best_{1}_{2}.pdb".format(JOB_NAME, i+2, best_ntide),"w")
 	app.PDBFile.writeModel(best_topology, best_positions, file=pdblog, modelIndex=1)
 	pdblog.close()
 
