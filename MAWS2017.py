@@ -32,13 +32,14 @@ import Space
 #Parser
 parser = argparse.ArgumentParser()
 parser.add_argument("-n", "--name", type=str, default="GFP", help="Job name.")
+parser.add_argument("-nt", "--ntides", type=int, default=15, help="Number of nucleotides in the aptamer.")
+parser.add_argument("-p", "--path", type=str, default="./pfoa.pdb", help="Path to your PDB file.")
+parser.add_argument("-ta", "--aptamertype", type=str, default="RNA", help="Type of aptamer, can be either DNA or RNA.")
+parser.add_argument("-tm", "--moleculetype", type=str, default="protein", help="Type of ligand molecule, can be either protein, organic or lipid.")
+parser.add_argument("-cenv", "--condaenv", type=str, default="maws_p3", help="Name of your conda environment that contains requirements.txt")
 parser.add_argument("-b", "--beta", type=float, default=0.01, help="Inverse temperature.")
 parser.add_argument("-c1", "--firstchunksize", type=int, default=5000, help="Number of samples in the first MAWS step.")
 parser.add_argument("-c2", "--secondchunksize", type=int, default=5000, help="Number of samples in all subsequent MAWS steps.")
-parser.add_argument("-nt", "--ntides", type=int, default=15, help="Number of nucleotides in the aptamer.")
-parser.add_argument("-p", "--path", type=str, default="/net/data.isilon/ag-reils/igem2015/testenv/silane.pdb", help="Path to your PDB file.")
-parser.add_argument("-ta", "--aptamertype", type=str, default="RNA", help="Type of aptamer, can be either DNA or RNA.")
-parser.add_argument("-tm", "--moleculetype", type=str, default="organic", help="Type of ligand molecule, can be either protein, organic or lipid.")
 args = parser.parse_args()
 
 
@@ -51,6 +52,7 @@ N_NTIDES = args.ntides
 PDB_PATH = args.path
 ATPAMER_TYPE = args.aptamertype
 MOLECULE_TYPE = args.moleculetype
+CONDA_ENV = args.condaenv
 N_ELEMENTS = 4 # Number of rotable junctions in RNA/DNA, to distinguish forward and backward rotation
 
 
@@ -69,16 +71,18 @@ output.write("Job: {0}\n".format(JOB_NAME))
 output.write("Input file: {0}\n".format(PDB_PATH))
 output.write("Sample number in initial step: {0}\n".format(FIRST_CHUNK_SIZE))
 output.write("Sample number per further steps: {0}\n".format(CHUNK_SIZE))
-output.write("Number of further steps: {0} (sequence length = )\n".format(N_NTIDES, N_NTIDES + 1))
+output.write("Number of further steps: {0} (sequence length = {1})\n".format(N_NTIDES, N_NTIDES + 1))
 output.write("Value of beta: {0}\n".format(BETA))
 output.write("Start time: {0}\n".format(str(datetime.now())))
 
 if ATPAMER_TYPE == "RNA":
 	xml_molecule = XMLStructure("RNA.xml") #Build Structure-object for RNA residues
 	nt_list = "GAUC"
+	force_field_aptamer = "leaprc.RNA.OL3"
 elif ATPAMER_TYPE == "DNA":
 	xml_molecule = XMLStructure("DNA.xml") #Build Structure-object for DNA residues
 	nt_list = "GATC"
+	force_field_aptamer = "leaprc.DNA.OL21"
 else: # Error handling
 	print("The type of aptamer was not properly set. It can only be DNA or RNA. Stopping the program.") #Option is not well defined, break program
 	exit()
@@ -95,19 +99,19 @@ else: # Error handling
 	exit()
 
 #Instantiate the Complex for further computation
-cpx = Complex(force_field_ligand)
+cpx = Complex(force_field_aptamer) #MODIFY
 output.write("Force field selected for the ligand molecule: {0}\n".format(force_field_ligand))
 
 #Add an empty Chain to the Complex, of structure RNA or DNA
 cpx.add_chain('', xml_molecule)
 
 #Add a chain to the complex using a pdb file (e.g. "xylanase.pdb")
-cpx.add_chain_from_PDB(PDB_PATH,force_field=force_field_ligand,parameterized=False)
+cpx.add_chain_from_PDB(PDB_PATH,force_field=force_field_aptamer,parameterized=False,conda_env=CONDA_ENV) # MODIFY
 
 #Build a complex with the pdb only, to get center of mass of the pdb --#
-c = Complex(force_field_ligand)
+c = Complex(force_field_aptamer) #MODIFY
 
-c.add_chain_from_PDB(PDB_PATH,force_field=force_field_ligand,parameterized=False)
+c.add_chain_from_PDB(PDB_PATH,force_field=force_field_aptamer,parameterized=False,conda_env=CONDA_ENV) # MODIFY
 
 c.build()
 #----------------------------------------------------------------------#

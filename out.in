@@ -1,5 +1,5 @@
 
-                            source leaprc.ff12SB
+                            source leaprc.DNA.OL21
                             source leaprc.gaff
                             
         
@@ -7,7 +7,7 @@
                 loadoff ./PDB.lib
 		loadamberparams ./PDB.frcmod 
                 
-                                        CHAIN0 = sequence {DA5 DA DG DA DT DT3}
+                                        CHAIN0 = sequence {DC5 DC DG3}
                                         
                                         CHAIN1 = sequence {PDB}
                                         

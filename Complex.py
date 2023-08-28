@@ -199,7 +199,7 @@ class Complex(object):
     
     ## Specifies a complex by giving a force field governing it, defaulting to "leaprc.protein.ff19SB_modAA"
     # @param force_field Specifies the force field governing the complex. 
-    def __init__(self, force_field="leaprc.protein.ff19SB_modAA"):
+    def __init__(self, force_field="leaprc.protein.ff19SB_modAA"): #MODIFY
         self.build_string = """
                             source %s
                             source leaprc.gaff
@@ -223,13 +223,13 @@ class Complex(object):
             chainID = 0
         self.chains.append(Chain(self, structure, sequence=sequence, start=start, ID=chainID))
 
-    def add_chain_from_PDB(self, pdb, force_field, structure=None, pdb_name='PDB', parameterized=False):
-        length = makeLib(pdb, pdb_name, force_field=force_field, parameterized=parameterized)
+    def add_chain_from_PDB(self, pdb, force_field, structure=None, pdb_name='PDB', parameterized=False, conda_env="maws_p3"): # MODIFY
+        length = makeLib(pdb, pdb_name, force_field=force_field, parameterized=parameterized, conda_env=conda_env)
         path = '/'.join(pdb.split('/')[:-1])
         structure = Structure([pdb_name], residue_length=[length], residue_path=path)
         self.add_chain(pdb_name, structure)
             
-    def build(self, target_path="", file_name="out"):
+    def build(self, target_path="", file_name="out", conda_env="maws_p3"):
         build_string = self.build_string 
         if self.chains:
             for chain in self.chains:
@@ -253,7 +253,7 @@ class Complex(object):
             infile.close()
             self.build_string = build_string
             #os.remove("%s%s.in"%(target_path, file_name))
-            result = subprocess.call("conda run -n maws_p2 && tleap -f %s%s.in"%(target_path,file_name),shell=True)
+            result = subprocess.call("conda run -n %s && tleap -f %s%s.in"%(conda_env,target_path,file_name),shell=True)
             self.prmtop = app.AmberPrmtopFile(target_path+file_name+".prmtop")
             self.inpcrd = app.AmberInpcrdFile(target_path+file_name+".inpcrd")
             self.topology = self.prmtop.topology
