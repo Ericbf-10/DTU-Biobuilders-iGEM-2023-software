@@ -1,0 +1,17 @@
+
+                            source leaprc.DNA.OL21
+                            source leaprc.gaff
+                            
+        
+        
+                loadoff ./PDB.lib
+		loadamberparams ./PDB.frcmod 
+                
+                                        CHAIN0 = sequence {DC5 DC DG3}
+                                        
+                                        CHAIN1 = sequence {PDB}
+                                        
+                                UNION = combine {CHAIN0 CHAIN1}
+                                saveamberparm UNION out.prmtop out.inpcrd
+                                quit
+                                

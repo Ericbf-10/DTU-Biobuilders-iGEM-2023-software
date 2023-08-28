@@ -1,0 +1,26 @@
+MAWS - Making Aptamers With Software
+Active version: 2.0 (released:_2017)
+Computational method: Kullback-Leibler
+Type of aptamer: DNA
+Job: maws_trash_DNA_aptamer
+Input file: pfoa.pdb
+Sample number in initial step: 5000
+Sample number per further steps: 5000
+Number of further steps: 5 (sequence length = )
+Value of beta: 0.01
+Start time: 2023-08-22 18:07:41.143477
+Initialized succesfully!
+2023-08-22 18:10:01.219711: starting initial step for 'G'
+2023-08-22 18:11:42.712215: starting initial step for 'A'
+2023-08-22 18:13:20.757283: starting initial step for 'T'
+2023-08-22 18:14:59.408104: starting initial step for 'C'
+2023-08-22 18:16:31.526693: Completed first step. Selected nucleotide: T
+2023-08-22 18:16:31.526720: Starting further steps to append 5 nucleotides
+2023-08-22 18:32:23.231603: Completed step 2. Selected sequence: T T
+2023-08-22 18:52:07.736792: Completed step 3. Selected sequence: A T T
+2023-08-22 19:15:47.431790: Completed step 4. Selected sequence: G A T T
+2023-08-22 19:44:35.461841: Completed step 5. Selected sequence: A G A T T
+2023-08-22 20:19:28.543265: Completed step 6. Selected sequence: A A G A T T
+2023-08-22 20:19:30.568788: Run completed. Thank you for using MAWS!
+
+Final sequence: A A G A T T
