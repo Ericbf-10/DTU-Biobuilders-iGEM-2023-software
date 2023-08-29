@@ -75,6 +75,7 @@ output.write("Number of further steps: {0} (sequence length = {1})\n".format(N_N
 output.write("Value of beta: {0}\n".format(BETA))
 output.write("Start time: {0}\n".format(str(datetime.now())))
 
+#Choose suitable force field file for aptamer
 if ATPAMER_TYPE == "RNA":
 	xml_molecule = XMLStructure("RNA.xml") #Build Structure-object for RNA residues
 	nt_list = "GAUC"
@@ -86,10 +87,11 @@ elif ATPAMER_TYPE == "DNA":
 else: # Error handling
 	print("The type of aptamer was not properly set. It can only be DNA or RNA. Stopping the program.") #Option is not well defined, break program
 	exit()
+output.write("Force field selected for the aptamer: {0}\n".format(force_field_aptamer))
 
-#Choose suitable force field file
+#Choose suitable force field file for ligand
 if MOLECULE_TYPE == "protein":
-	force_field_ligand = "leaprc.protein.ff19SB_modAA"
+	force_field_ligand = "leaprc.protein.ff19SB"
 elif MOLECULE_TYPE == "organic":
 	force_field_ligand = "leaprc.gaff2"
 elif MOLECULE_TYPE == "lipid":
@@ -97,21 +99,21 @@ elif MOLECULE_TYPE == "lipid":
 else: # Error handling
 	print("The type of molecule was not properly set. It can only be protein, organic or lipid. Stopping the program.") #Option is not well defined, break program
 	exit()
+output.write("Force field selected for the ligand molecule: {0}\n".format(force_field_ligand))
 
 #Instantiate the Complex for further computation
-cpx = Complex(force_field_aptamer) #MODIFY
-output.write("Force field selected for the ligand molecule: {0}\n".format(force_field_ligand))
+cpx = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand) #MODIFY
 
 #Add an empty Chain to the Complex, of structure RNA or DNA
 cpx.add_chain('', xml_molecule)
 
 #Add a chain to the complex using a pdb file (e.g. "xylanase.pdb")
-cpx.add_chain_from_PDB(PDB_PATH,force_field=force_field_aptamer,parameterized=False,conda_env=CONDA_ENV) # MODIFY
+cpx.add_chain_from_PDB(PDB_PATH,force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV) # MODIFY
 
 #Build a complex with the pdb only, to get center of mass of the pdb --#
-c = Complex(force_field_aptamer) #MODIFY
+c = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand) #MODIFY
 
-c.add_chain_from_PDB(PDB_PATH,force_field=force_field_aptamer,parameterized=False,conda_env=CONDA_ENV) # MODIFY
+c.add_chain_from_PDB(PDB_PATH,force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV) # MODIFY
 
 c.build()
 #----------------------------------------------------------------------#
@@ -143,7 +145,7 @@ for ntide in nt_list:
 	aptamer.create_sequence(ntide)
 	#Build the Complex
 	print("INTO LEAP ---------------------------------------------------------------------")
-	complex.build()
+	complex.build() # Breaking tleap MODIFY
 	print("OUT OF LEAP -------------------------------------------------------------------")
 	#Remember its initial positions
 	positions0 = complex.positions[:]

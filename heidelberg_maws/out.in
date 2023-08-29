@@ -1,13 +1,13 @@
 
                             source leaprc.DNA.OL21
-                            source leaprc.gaff
+                            source leaprc.gaff2
                             
         
         
                 loadoff ./PDB.lib
 		loadamberparams ./PDB.frcmod 
                 
-                                        CHAIN0 = sequence {DC5 DC DG3}
+                                        CHAIN0 = sequence {DG5 DT DG DA DA DT3}
                                         
                                         CHAIN1 = sequence {PDB}
                                         

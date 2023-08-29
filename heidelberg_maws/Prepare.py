@@ -4,14 +4,15 @@ from openmm import app
 
 ## makeLib
 # parametrizes a pdb or mol2 file to generate a .lib library file for tleap / nab
-def makeLib(file_path, residue_name, connect0=None, connect1=None, charges='bcc', atom_type='gaff', force_field='leaprc.protein.ff19SB_modAA', parameterized=False, conda_env="maws_p3"): #MODIFY
+def makeLib(file_path, residue_name, connect0=None, connect1=None, charges='bcc', atom_type='gaff', force_field_aptamer='leaprc.RNA.OL3', force_field_ligand='leaprc.protein.ff19SB', parameterized=False, conda_env="maws_p3"): #MODIFY
 	name, extension = file_path.split('/')[-1].split(".")
 	lib_path = '/'.join(file_path.split('/')[:-1]+[residue_name])
 	tleap_input = """
 	source %s
-	source leaprc.gaff
+	source %s
 	%s = loadmol2 %s.mol2
-	loadamberparams %s.frcmod"""%(force_field,
+	loadamberparams %s.frcmod"""%(force_field_aptamer,
+		 force_field_ligand,
 		 residue_name, name, 
 		 lib_path) 
 	if connect0 and connect1:
@@ -31,13 +32,13 @@ def makeLib(file_path, residue_name, connect0=None, connect1=None, charges='bcc'
 	"""%(residue_name, residue_name, lib_path, residue_name, lib_path)
 	if parameterized:
 		tleap_input = """
-		source leaprc.gaff
+		source %s
 		source %s
 		%s = loadpdb %s.pdb
 		saveoff %s %s.lib
 		savepdb %s %s_tmp.pdb
 		quit
-		"""%(force_field, residue_name, name, residue_name, lib_path,
+		"""%(force_field_aptamer, force_field_ligand, residue_name, name, residue_name, lib_path,
 			residue_name, lib_path)
 	#Write LEaP infile
 	with open("%s.in"%name,"w") as fil:
