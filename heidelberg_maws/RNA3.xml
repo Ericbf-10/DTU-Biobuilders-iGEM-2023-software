@@ -1,0 +1,748 @@
+<structure>
+  <alias>
+    <element name="RCN">
+      <alone>RCN</alone>
+      <start>RC5</start>
+      <middle>RC</middle>
+      <end>RC3</end>
+    </element>
+    <element name="A">
+      <alone>RAN</alone>
+      <start>RA5</start>
+      <middle>RA</middle>
+      <end>RA3</end>
+    </element>
+    <element name="C">
+      <alone>RCN</alone>
+      <start>RC5</start>
+      <middle>RC</middle>
+      <end>RC3</end>
+    </element>
+    <element name="RUN">
+      <alone>RUN</alone>
+      <start>RU5</start>
+      <middle>RU</middle>
+      <end>RU3</end>
+    </element>
+    <element name="G">
+      <alone>RGN</alone>
+      <start>RG5</start>
+      <middle>RG</middle>
+      <end>RG3</end>
+    </element>
+    <element name="RG3">
+      <alone>RG3</alone>
+      <start>RG</start>
+      <middle>RG</middle>
+      <end>RG3</end>
+    </element>
+    <element name="RG">
+      <alone>RGN</alone>
+      <start>RG5</start>
+      <middle>RG</middle>
+      <end>RG3</end>
+    </element>
+    <element name="RAN">
+      <alone>RAN</alone>
+      <start>RA5</start>
+      <middle>RA</middle>
+      <end>RA3</end>
+    </element>
+    <element name="RA3">
+      <alone>RA3</alone>
+      <start>RA</start>
+      <middle>RA</middle>
+      <end>RA3</end>
+    </element>
+    <element name="RGN">
+      <alone>RGN</alone>
+      <start>RG5</start>
+      <middle>RG</middle>
+      <end>RG3</end>
+    </element>
+    <element name="RC">
+      <alone>RCN</alone>
+      <start>RC5</start>
+      <middle>RC</middle>
+      <end>RC3</end>
+    </element>
+    <element name="RA">
+      <alone>RAN</alone>
+      <start>RA5</start>
+      <middle>RA</middle>
+      <end>RA3</end>
+    </element>
+    <element name="RA5">
+      <alone>RA5</alone>
+      <start>RA5</start>
+      <middle>RA</middle>
+      <end>RA</end>
+    </element>
+    <element name="U">
+      <alone>RUN</alone>
+      <start>RU5</start>
+      <middle>RU</middle>
+      <end>RU3</end>
+    </element>
+    <element name="RG5">
+      <alone>RG5</alone>
+      <start>RG5</start>
+      <middle>RG</middle>
+      <end>RG</end>
+    </element>
+    <element name="RU3">
+      <alone>RU3</alone>
+      <start>RU</start>
+      <middle>RU</middle>
+      <end>RU3</end>
+    </element>
+    <element name="RU">
+      <alone>RUN</alone>
+      <start>RU5</start>
+      <middle>RU</middle>
+      <end>RU3</end>
+    </element>
+    <element name="RC5">
+      <alone>RC5</alone>
+      <start>RC5</start>
+      <middle>RC</middle>
+      <end>RC</end>
+    </element>
+    <element name="RC3">
+      <alone>RC3</alone>
+      <start>RC</start>
+      <middle>RC</middle>
+      <end>RC3</end>
+    </element>
+    <element name="RU5">
+      <alone>RU5</alone>
+      <start>RU5</start>
+      <middle>RU</middle>
+      <end>RU</end>
+    </element>
+  </alias>
+  <residue name="RGN" length="33">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>8</middle_pre>
+      <bond>10</bond>
+      <middle_post>25</middle_post>
+      <end>32</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>1</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>1</start>
+      <bond>2</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>8</start>
+      <bond>10</bond>
+      <end>-8</end>
+    </rotation>
+    <rotation index="3">
+      <start>-8</start>
+      <bond>-2</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RAN" length="32">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>8</middle_pre>
+      <bond>10</bond>
+      <middle_post>24</middle_post>
+      <end>31</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>1</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>1</start>
+      <bond>2</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>8</start>
+      <bond>10</bond>
+      <end>-8</end>
+    </rotation>
+    <rotation index="3">
+      <start>-8</start>
+      <bond>-2</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RUN" length="29">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>8</middle_pre>
+      <bond>10</bond>
+      <middle_post>21</middle_post>
+      <end>28</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>1</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>1</start>
+      <bond>2</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>8</start>
+      <bond>10</bond>
+      <end>-8</end>
+    </rotation>
+    <rotation index="3">
+      <start>-8</start>
+      <bond>-2</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RCN" length="30">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>8</middle_pre>
+      <bond>10</bond>
+      <middle_post>22</middle_post>
+      <end>29</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>1</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>1</start>
+      <bond>2</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>8</start>
+      <bond>10</bond>
+      <end>-8</end>
+    </rotation>
+    <rotation index="3">
+      <start>-8</start>
+      <bond>-2</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RG" length="34">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>10</middle_pre>
+      <bond>12</bond>
+      <middle_post>27</middle_post>
+      <end>33</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>3</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>3</start>
+      <bond>4</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>10</start>
+      <bond>12</bond>
+      <end>-7</end>
+    </rotation>
+    <rotation index="3">
+      <start>-7</start>
+      <bond>-1</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RA" length="33">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>10</middle_pre>
+      <bond>12</bond>
+      <middle_post>26</middle_post>
+      <end>32</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>3</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>3</start>
+      <bond>4</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>10</start>
+      <bond>12</bond>
+      <end>-7</end>
+    </rotation>
+    <rotation index="3">
+      <start>-7</start>
+      <bond>-1</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RU" length="30">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>10</middle_pre>
+      <bond>12</bond>
+      <middle_post>23</middle_post>
+      <end>29</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>3</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>3</start>
+      <bond>4</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>10</start>
+      <bond>12</bond>
+      <end>-7</end>
+    </rotation>
+    <rotation index="3">
+      <start>-7</start>
+      <bond>-1</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RC" length="31">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>10</middle_pre>
+      <bond>12</bond>
+      <middle_post>24</middle_post>
+      <end>30</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>3</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>3</start>
+      <bond>4</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>10</start>
+      <bond>12</bond>
+      <end>-7</end>
+    </rotation>
+    <rotation index="3">
+      <start>-7</start>
+      <bond>-1</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RG5" length="32">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>8</middle_pre>
+      <bond>10</bond>
+      <middle_post>25</middle_post>
+      <end>31</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>1</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>1</start>
+      <bond>2</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>8</start>
+      <bond>10</bond>
+      <end>-7</end>
+    </rotation>
+    <rotation index="3">
+      <start>-7</start>
+      <bond>-1</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RA5" length="31">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>8</middle_pre>
+      <bond>10</bond>
+      <middle_post>24</middle_post>
+      <end>30</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>1</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>1</start>
+      <bond>2</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>8</start>
+      <bond>10</bond>
+      <end>-7</end>
+    </rotation>
+    <rotation index="3">
+      <start>-7</start>
+      <bond>-1</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RU5" length="28">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>8</middle_pre>
+      <bond>10</bond>
+      <middle_post>21</middle_post>
+      <end>27</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>1</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>1</start>
+      <bond>2</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>8</start>
+      <bond>10</bond>
+      <end>-7</end>
+    </rotation>
+    <rotation index="3">
+      <start>-7</start>
+      <bond>-1</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RC5" length="29">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>8</middle_pre>
+      <bond>10</bond>
+      <middle_post>22</middle_post>
+      <end>28</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>1</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>1</start>
+      <bond>2</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>8</start>
+      <bond>10</bond>
+      <end>-7</end>
+    </rotation>
+    <rotation index="3">
+      <start>-7</start>
+      <bond>-1</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RG3" length="35">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>10</middle_pre>
+      <bond>12</bond>
+      <middle_post>27</middle_post>
+      <end>34</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>3</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>3</start>
+      <bond>4</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>10</start>
+      <bond>12</bond>
+      <end>-8</end>
+    </rotation>
+    <rotation index="3">
+      <start>-8</start>
+      <bond>-2</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RA3" length="34">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>10</middle_pre>
+      <bond>12</bond>
+      <middle_post>26</middle_post>
+      <end>33</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>3</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>3</start>
+      <bond>4</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>10</start>
+      <bond>12</bond>
+      <end>-8</end>
+    </rotation>
+    <rotation index="3">
+      <start>-8</start>
+      <bond>-2</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RU3" length="31">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>10</middle_pre>
+      <bond>12</bond>
+      <middle_post>23</middle_post>
+      <end>30</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>3</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>3</start>
+      <bond>4</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>10</start>
+      <bond>12</bond>
+      <end>-8</end>
+    </rotation>
+    <rotation index="3">
+      <start>-8</start>
+      <bond>-2</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+  <residue name="RC3" length="32">
+    <append>
+      <newFirstAtom>0</newFirstAtom>
+      <oldLastAtom>-1</oldLastAtom>
+      <bondLength>1.6</bondLength>
+    </append>
+    <prepend>
+      <newLastAtom>-2</newLastAtom>
+      <oldFirstAtom>0</oldFirstAtom>
+      <bondLength>1.6</bondLength>
+    </prepend>
+    <backbone>
+      <start>0</start>
+      <middle_pre>10</middle_pre>
+      <bond>12</bond>
+      <middle_post>24</middle_post>
+      <end>31</end>
+    </backbone>
+    <rotation index="0">
+      <start>0</start>
+      <bond>3</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="1">
+      <start>3</start>
+      <bond>4</bond>
+      <end>end</end>
+    </rotation>
+    <rotation index="2">
+      <start>10</start>
+      <bond>12</bond>
+      <end>-8</end>
+    </rotation>
+    <rotation index="3">
+      <start>-8</start>
+      <bond>-2</bond>
+      <end>end</end>
+    </rotation>
+  </residue>
+</structure>

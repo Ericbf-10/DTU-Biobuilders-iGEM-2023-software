@@ -47,7 +47,7 @@ args = parser.parse_args()
 JOB_NAME = args.name
 BETA = args.beta
 FIRST_CHUNK_SIZE = args.firstchunksize
-CHUNK_SIZE = args.secondchunksize
+SECOND_CHUNK_SIZE = args.secondchunksize
 N_NTIDES = args.ntides
 PDB_PATH = args.path
 ATPAMER_TYPE = args.aptamertype
@@ -70,13 +70,14 @@ output.write("Type of ligand molecule: {0}\n".format(MOLECULE_TYPE))
 output.write("Job: {0}\n".format(JOB_NAME))
 output.write("Input file: {0}\n".format(PDB_PATH))
 output.write("Sample number in initial step: {0}\n".format(FIRST_CHUNK_SIZE))
-output.write("Sample number per further steps: {0}\n".format(CHUNK_SIZE))
+output.write("Sample number per further steps: {0}\n".format(SECOND_CHUNK_SIZE))
 output.write("Number of further steps: {0} (sequence length = {1})\n".format(N_NTIDES, N_NTIDES + 1))
 output.write("Value of beta: {0}\n".format(BETA))
 output.write("Start time: {0}\n".format(str(datetime.now())))
 
 #Choose suitable force field file for aptamer
 if ATPAMER_TYPE == "RNA":
+	XMLStructure("RNA.xml")
 	xml_molecule = XMLStructure("RNA.xml") #Build Structure-object for RNA residues
 	nt_list = "GAUC"
 	force_field_aptamer = "leaprc.RNA.OL3"
@@ -102,18 +103,18 @@ else: # Error handling
 output.write("Force field selected for the ligand molecule: {0}\n".format(force_field_ligand))
 
 #Instantiate the Complex for further computation
-cpx = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand) #MODIFY
+cpx = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand)
 
 #Add an empty Chain to the Complex, of structure RNA or DNA
 cpx.add_chain('', xml_molecule)
 
-#Add a chain to the complex using a pdb file (e.g. "xylanase.pdb")
-cpx.add_chain_from_PDB(PDB_PATH,force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV) # MODIFY
+#Add a chain to the complex using a pdb file (e.g. "pfoa.pdb")
+cpx.add_chain_from_PDB(PDB_PATH,force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV)
 
 #Build a complex with the pdb only, to get center of mass of the pdb --#
-c = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand) #MODIFY
+c = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand)
 
-c.add_chain_from_PDB(PDB_PATH,force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV) # MODIFY
+c.add_chain_from_PDB(PDB_PATH,force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV)
 
 c.build()
 #----------------------------------------------------------------------#
@@ -145,7 +146,7 @@ for ntide in nt_list:
 	aptamer.create_sequence(ntide)
 	#Build the Complex
 	print("INTO LEAP ---------------------------------------------------------------------")
-	complex.build() # Breaking tleap MODIFY
+	complex.build()
 	print("OUT OF LEAP -------------------------------------------------------------------")
 	#Remember its initial positions
 	positions0 = complex.positions[:]
@@ -204,7 +205,7 @@ output.write("{0}: Completed first step. Selected nucleotide: {1}\n".format(str(
 output.write("{0}: Starting further steps to append {1} nucleotides\n".format(str(datetime.now()), N_NTIDES))
 
 #For how many nucleotides we want (5)
-for i in range(N_NTIDES):
+for i in range(1, N_NTIDES+1):
 	#Same as above, more or less
 	best_old_sequence = best_sequence
 	best_old_positions = best_positions[:]
@@ -242,7 +243,7 @@ for i in range(N_NTIDES):
 			positions0 = complex.positions[:]
 
 			#For number of samples
-			for k in range(CHUNK_SIZE):
+			for k in range(SECOND_CHUNK_SIZE):
 				#Get random angles
 				rotation = rotations.generator()
 				#For everything forward
@@ -273,7 +274,7 @@ for i in range(N_NTIDES):
 			entropy = S(energies, beta=BETA)
 
 			#outputs
-			pdblog = open("{0}_{1}_{2}.pdb".format(JOB_NAME, i+2, ntide), "w")
+			pdblog = open("{0}_{1}_{2}.pdb".format(JOB_NAME, i+1, ntide), "w")
 			app.PDBFile.writeModel(copy.deepcopy(complex.topology), position[:], file=pdblog, modelIndex=1)
 			pdblog.close()
 
@@ -287,8 +288,8 @@ for i in range(N_NTIDES):
 				best_topology = copy.deepcopy(complex.topology)
 	app.PDBFile.writeModel(best_topology, best_positions, file=step, modelIndex=1)
 	#Output best as well
-	output.write("{0}: Completed step {1}. Selected sequence: {2}\n".format(str(datetime.now()), i+2, best_sequence))
-	pdblog = open("{0}_best_{1}_{2}.pdb".format(JOB_NAME, i+2, best_ntide),"w")
+	output.write("{0}: Completed step {1}. Selected sequence: {2}\n".format(str(datetime.now()), i+1, best_sequence))
+	pdblog = open("{0}_best_{1}_{2}.pdb".format(JOB_NAME, i+1, best_ntide),"w")
 	app.PDBFile.writeModel(best_topology, best_positions, file=pdblog, modelIndex=1)
 	pdblog.close()
 

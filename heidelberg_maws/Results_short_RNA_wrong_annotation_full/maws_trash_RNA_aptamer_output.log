@@ -1,0 +1,29 @@
+MAWS - Making Aptamers With Software
+Active version: 2.0 (released:_2017)
+Computational method: Kullback-Leibler
+Type of aptamer: RNA
+Type of ligand molecule: organic
+Job: maws_trash_RNA_aptamer
+Input file: pfoa.pdb
+Sample number in initial step: 100
+Sample number per further steps: 100
+Number of further steps: 5 (sequence length = 6)
+Value of beta: 0.01
+Start time: 2023-08-29 16:54:19.045439
+Force field selected for the aptamer: leaprc.RNA.OL3
+Force field selected for the ligand molecule: leaprc.gaff2
+Initialized succesfully!
+2023-08-29 16:56:39.122998: starting initial step for 'G'
+2023-08-29 16:56:42.829726: starting initial step for 'A'
+2023-08-29 16:56:46.456821: starting initial step for 'U'
+2023-08-29 16:56:49.909952: starting initial step for 'C'
+2023-08-29 16:56:53.660356: Completed first step. Selected nucleotide: C
+2023-08-29 16:56:53.660379: Starting further steps to append 5 nucleotides
+2023-08-29 17:00:14.364470: Completed step 2. Selected sequence: G C
+2023-08-29 17:05:17.158199: Completed step 3. Selected sequence: G G C
+2023-08-29 17:12:52.280697: Completed step 4. Selected sequence: A G G C
+2023-08-29 17:23:11.207718: Completed step 5. Selected sequence: A A G G C
+2023-08-29 17:36:35.291592: Completed step 6. Selected sequence: C A A G G C
+2023-08-29 17:36:37.682435: Run completed. Thank you for using MAWS!
+
+Final sequence: C A A G G C
