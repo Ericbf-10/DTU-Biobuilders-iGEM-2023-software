@@ -28,7 +28,6 @@ def XMLParseStructure(path):
 				elem[3] = element.find('middle').text
 				elem[4] = element.find('end').text
 				aliases.append(elem)
-				print("elem", elem)
 			else:
 				pass
 

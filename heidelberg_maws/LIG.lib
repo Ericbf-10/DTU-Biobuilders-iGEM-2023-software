@@ -1,6 +1,6 @@
 !!index array str
- "PDB"
-!entry.PDB.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
+ "LIG"
+!entry.LIG.unit.atoms table  str name  str type  int typex  int resx  int flags  int seq  int elmnt  dbl chg
  "F1" "f" 0 1 131072 1 9 -0.178800
  "F2" "f" 0 1 131072 2 9 -0.178800
  "F3" "f" 0 1 131072 3 9 -0.176800
@@ -27,7 +27,7 @@
  "C7" "c3" 0 1 131072 24 6 0.610900
  "C8" "c" 0 1 131072 25 6 0.597100
  "H1" "ho" 0 1 131072 26 1 0.465000
-!entry.PDB.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
+!entry.LIG.unit.atomspertinfo table  str pname  str ptype  int ptypex  int pelmnt  dbl pchg
  "F1" "f" 0 -1 0.0
  "F2" "f" 0 -1 0.0
  "F3" "f" 0 -1 0.0
@@ -54,18 +54,18 @@
  "C7" "c3" 0 -1 0.0
  "C8" "c" 0 -1 0.0
  "H1" "ho" 0 -1 0.0
-!entry.PDB.unit.boundbox array dbl
+!entry.LIG.unit.boundbox array dbl
  -1.000000
  0.0
  0.0
  0.0
  0.0
-!entry.PDB.unit.childsequence single int
+!entry.LIG.unit.childsequence single int
  2
-!entry.PDB.unit.connect array int
+!entry.LIG.unit.connect array int
  0
  0
-!entry.PDB.unit.connectivity table  int atom1x  int atom2x  int flags
+!entry.LIG.unit.connectivity table  int atom1x  int atom2x  int flags
  1 18 1
  2 18 1
  3 19 1
@@ -91,7 +91,7 @@
  21 23 1
  22 24 1
  23 25 1
-!entry.PDB.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
+!entry.LIG.unit.hierarchy table  str abovetype  int abovex  str belowtype  int belowx
  "U" 0 "R" 1
  "R" 1 "A" 1
  "R" 1 "A" 2
@@ -119,9 +119,9 @@
  "R" 1 "A" 24
  "R" 1 "A" 25
  "R" 1 "A" 26
-!entry.PDB.unit.name single str
- "PDB"
-!entry.PDB.unit.positions table  dbl x  dbl y  dbl z
+!entry.LIG.unit.name single str
+ "LIG"
+!entry.LIG.unit.positions table  dbl x  dbl y  dbl z
  -1.054000 1.948000 -0.201000
  0.543000 1.258000 -1.503000
  1.222000 1.649000 1.078000
@@ -148,19 +148,19 @@
  -3.279000 0.300000 0.430000
  3.539000 0.591000 -0.167000
  5.153000 1.108000 0.793000
-!entry.PDB.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
+!entry.LIG.unit.residueconnect table  int c1x  int c2x  int c3x  int c4x  int c5x  int c6x
  0 0 0 0 0 0
-!entry.PDB.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
- "PDB" 1 27 1 "?" 0
-!entry.PDB.unit.residuesPdbSequenceNumber array int
+!entry.LIG.unit.residues table  str name  int seq  int childseq  int startatomx  str restype  int imagingx
+ "LIG" 1 27 1 "?" 0
+!entry.LIG.unit.residuesPdbSequenceNumber array int
  0
-!entry.PDB.unit.solventcap array dbl
+!entry.LIG.unit.solventcap array dbl
  -1.000000
  0.0
  0.0
  0.0
  0.0
-!entry.PDB.unit.velocities table  dbl x  dbl y  dbl z
+!entry.LIG.unit.velocities table  dbl x  dbl y  dbl z
  0.0 0.0 0.0
  0.0 0.0 0.0
  0.0 0.0 0.0

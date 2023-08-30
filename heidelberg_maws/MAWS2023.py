@@ -55,7 +55,6 @@ MOLECULE_TYPE = args.moleculetype
 CONDA_ENV = args.condaenv
 N_ELEMENTS = 4 # Number of rotable junctions in RNA/DNA, to distinguish forward and backward rotation
 
-
 #Open a pdb file, to monitor progress
 output = open("{0}_output.log".format(JOB_NAME),"w")
 entropyLog = open("{0}_entropy.log".format(JOB_NAME), "w")
@@ -77,7 +76,6 @@ output.write("Start time: {0}\n".format(str(datetime.now())))
 
 #Choose suitable force field file for aptamer
 if ATPAMER_TYPE == "RNA":
-	XMLStructure("RNA.xml")
 	xml_molecule = XMLStructure("RNA.xml") #Build Structure-object for RNA residues
 	nt_list = "GAUC"
 	force_field_aptamer = "leaprc.RNA.OL3"
@@ -109,12 +107,12 @@ cpx = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_
 cpx.add_chain('', xml_molecule)
 
 #Add a chain to the complex using a pdb file (e.g. "pfoa.pdb")
-cpx.add_chain_from_PDB(PDB_PATH,force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV)
+cpx.add_chain_from_PDB(pdb_path=PDB_PATH, force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV)
 
 #Build a complex with the pdb only, to get center of mass of the pdb --#
 c = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand)
 
-c.add_chain_from_PDB(PDB_PATH,force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV)
+c.add_chain_from_PDB(pdb_path=PDB_PATH, force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV)
 
 c.build()
 #----------------------------------------------------------------------#

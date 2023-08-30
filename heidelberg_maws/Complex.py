@@ -224,9 +224,9 @@ class Complex(object):
             chainID = 0
         self.chains.append(Chain(self, structure, sequence=sequence, start=start, ID=chainID))
 
-    def add_chain_from_PDB(self, pdb, force_field_aptamer, force_field_ligand, structure=None, pdb_name='PDB', parameterized=False, conda_env="maws_p3"):
-        length = makeLib(pdb, pdb_name, force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand, parameterized=parameterized, conda_env=conda_env)
-        path = '/'.join(pdb.split('/')[:-1])
+    def add_chain_from_PDB(self, pdb_path, force_field_aptamer, force_field_ligand, structure=None, pdb_name='LIG', parameterized=False, conda_env="maws_p3"):
+        length = makeLib(pdb_path, pdb_name, force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand, parameterized=parameterized, conda_env=conda_env)
+        path = '/'.join(pdb_path.split('/')[:-1])
         structure = Structure([pdb_name], residue_length=[length], residue_path=path)
         self.add_chain(pdb_name, structure)
             

@@ -4,12 +4,12 @@
                             
         
         
-                loadoff ./PDB.lib
-		loadamberparams ./PDB.frcmod 
+                loadoff ./LIG.lib
+		loadamberparams ./LIG.frcmod 
                 
-                                        CHAIN0 = sequence {A5 C3}
+                                        CHAIN0 = sequence {U5 A G C3}
                                         
-                                        CHAIN1 = sequence {PDB}
+                                        CHAIN1 = sequence {LIG}
                                         
                                 UNION = combine {CHAIN0 CHAIN1}
                                 saveamberparm UNION out.prmtop out.inpcrd
