@@ -28,10 +28,21 @@ from operator import itemgetter
 from openmm import unit
 from openmm import app
 import Space
+import os
+os.environ['OPENMM_CPU_THREADS'] = '1' # Set the number of threads to use for computation
+print("environ_openmm", os.getenv('OPENMM_CPU_THREADS'))
+
+# DEBUG
+# Get a dictionary of all environment variables
+env_variables = os.environ
+
+# Print all environment variables
+for key, value in env_variables.items():
+    print(f"{key}: {value}")
 
 #Parser
 parser = argparse.ArgumentParser()
-parser.add_argument("-n", "--name", type=str, default="GFP", help="Job name.")
+parser.add_argument("-n", "--name", type=str, default="MAWS_aptamer", help="Job name.")
 parser.add_argument("-nt", "--ntides", type=int, default=15, help="Number of nucleotides in the aptamer.")
 parser.add_argument("-p", "--path", type=str, default="./pfoa.pdb", help="Path to your PDB file.")
 parser.add_argument("-ta", "--aptamertype", type=str, default="RNA", help="Type of aptamer, can be either DNA or RNA.")
@@ -101,18 +112,18 @@ else: # Error handling
 output.write("Force field selected for the ligand molecule: {0}\n".format(force_field_ligand))
 
 #Instantiate the Complex for further computation
-cpx = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand)
+cpx = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand, conda_env=CONDA_ENV)
 
 #Add an empty Chain to the Complex, of structure RNA or DNA
 cpx.add_chain('', xml_molecule)
 
 #Add a chain to the complex using a pdb file (e.g. "pfoa.pdb")
-cpx.add_chain_from_PDB(pdb_path=PDB_PATH, force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV)
+cpx.add_chain_from_PDB(pdb_path=PDB_PATH, force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False)
 
 #Build a complex with the pdb only, to get center of mass of the pdb --#
-c = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand)
+c = Complex(force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand, conda_env=CONDA_ENV)
 
-c.add_chain_from_PDB(pdb_path=PDB_PATH, force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False,conda_env=CONDA_ENV)
+c.add_chain_from_PDB(pdb_path=PDB_PATH, force_field_aptamer=force_field_aptamer, force_field_ligand=force_field_ligand,parameterized=False)
 
 c.build()
 #----------------------------------------------------------------------#
@@ -202,8 +213,8 @@ pdblog.close()
 output.write("{0}: Completed first step. Selected nucleotide: {1}\n".format(str(datetime.now()), best_sequence))
 output.write("{0}: Starting further steps to append {1} nucleotides\n".format(str(datetime.now()), N_NTIDES))
 
-#For how many nucleotides we want (5)
-for i in range(1, N_NTIDES+1):
+#For how many nucleotides we want
+for i in range(1, N_NTIDES):
 	#Same as above, more or less
 	best_old_sequence = best_sequence
 	best_old_positions = best_positions[:]

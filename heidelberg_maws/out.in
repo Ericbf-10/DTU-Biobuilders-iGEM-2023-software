@@ -1,5 +1,5 @@
 
-                            source leaprc.RNA.OL3
+                            source leaprc.DNA.OL21
                             source leaprc.gaff2
                             
         
@@ -7,7 +7,7 @@
                 loadoff ./LIG.lib
 		loadamberparams ./LIG.frcmod 
                 
-                                        CHAIN0 = sequence {U5 A G C3}
+                                        CHAIN0 = sequence {DA5 DA DG3}
                                         
                                         CHAIN1 = sequence {LIG}
                                         
