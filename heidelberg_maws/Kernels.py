@@ -8,7 +8,7 @@ from openmm import unit
 def catchZero(numeric):
 	return numeric + 1e-50
 
-@jit(nopython=False)
+@jit
 def rotateKernel(positions, element, axis, angle):
 	x, y, z = np.asarray(axis)/(np.linalg.norm(np.asarray(axis)))
 	phi_2 = angle/2.
@@ -29,33 +29,33 @@ def rotateKernel(positions, element, axis, angle):
 
 	return unit.Quantity(pos, unit.angstrom)
 
-@jit(nopython=False)
+@jit
 def translateKernel(positions, element, shift):
 	pos = np.array(positions)
 	for j in range(element[0],element[2]):
 		pos[j] += shift
 	return pos
 
-@jit(nopython=False)
+@jit
 def centerOfMass(positions):
 	return positions.sum(axis=0)/len(positions)
 
-@jit(nopython=False)
+@jit
 def radius(center, positions):
 	return max(map(np.linalg.norm, np.asarray(positions) - np.asarray(center)))
 
-@jit(nopython=False)
+@jit
 def kullbackLeiblerDivergenceKernel(sample, reference_sample):
 	return -(np.array(sample)*np.log(np.array(sample)/np.array(reference_sample))).sum()
 
-@jit(nopython=False)
+@jit
 def EntropyKernel(sample):
 	#print("START_DIAGNOSIS:")
 	#print("LEN_SAMPLE: %s"%len(sample))
 	#print("SAMPLE: %s"%sample[0:10])
 	return -(np.array(sample)*np.log(catchZero(np.array(sample)*len(sample)))).sum()
 
-@jit(nopython=False)
+@jit
 def ZPS(sample, beta=0.001):
 	Z = np.exp(-beta*np.array(sample)).sum()
 	#print("ZED: %s"%Z)
@@ -64,6 +64,6 @@ def ZPS(sample, beta=0.001):
 	#print("ENTROPY: %s"%S)
 	return Z, P, S
 
-@jit(nopython=False)
+@jit
 def S(sample, beta=0.001):
 	return ZPS(sample, beta)[2]

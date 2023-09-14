@@ -1,0 +1,2800 @@
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/python
+
+Welcome to antechamber 22.0: molecular input file processor.
+
+Info: acdoctor mode is on: check and diagnose problems in the input file.
+Info: The atom type is set to gaff; the options available to the -at flag are
+      gaff, gaff2, amber, bcc, and sybyl.
+
+-- Check Format for pdb File --
+   Status: pass
+-- Check Unusual Elements --
+   Status: pass
+-- Check Open Valences --
+   Status: pass
+-- Check Geometry --
+      for those bonded   
+      for those not bonded   
+   Status: pass
+-- Check Weird Bonds --
+   Status: pass
+-- Check Number of Units --
+   Status: pass
+acdoctor mode has completed checking the input file.
+
+Info: Total number of electrons: 200; net charge: 0
+
+Running: /zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/sqm -O -i sqm.in -o sqm.out
+
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source pfoa.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./pfoa.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading Mol2 file: ./pfoa.mol2
+Reading MOLECULE named LIG
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking 'LIG'....
+Checking parameters for unit 'LIG'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+Building topology.
+Building atom parameters.
+Writing pdb file: LIG_tmp.pdb
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+
+Welcome to antechamber 22.0: molecular input file processor.
+
+Info: acdoctor mode is on: check and diagnose problems in the input file.
+Info: The atom type is set to gaff; the options available to the -at flag are
+      gaff, gaff2, amber, bcc, and sybyl.
+
+-- Check Format for pdb File --
+   Status: pass
+-- Check Unusual Elements --
+   Status: pass
+-- Check Open Valences --
+   Status: pass
+-- Check Geometry --
+      for those bonded   
+      for those not bonded   
+   Status: pass
+-- Check Weird Bonds --
+   Status: pass
+-- Check Number of Units --
+   Status: pass
+acdoctor mode has completed checking the input file.
+
+Info: Total number of electrons: 200; net charge: 0
+
+Running: /zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/sqm -O -i sqm.in -o sqm.out
+
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source pfoa.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./pfoa.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading Mol2 file: ./pfoa.mol2
+Reading MOLECULE named LIG
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking 'LIG'....
+Checking parameters for unit 'LIG'.
+Checking for bond parameters.
+Checking for angle parameters.
+Unit is OK.
+Building topology.
+Building atom parameters.
+Writing pdb file: LIG_tmp.pdb
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 1 improper torsion applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 13 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 12 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 11 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 11 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 11 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 23 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 11 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 23 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 11 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 22 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 11 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 22 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 11 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 21 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 11 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 21 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 11 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 21 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 11 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 0; Notes = 0.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 21 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 23 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 35 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 23 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 35 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 23 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 34 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 23 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 34 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 23 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 33 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 23 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 33 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 23 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 33 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-1.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 23 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 33 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/prep to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm to search path.
+-I: Adding /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd to search path.
+-f: Source out.in.
+
+Welcome to LEaP!
+(no leaprc in search path)
+Sourcing: ./out.in
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.DNA.OL21 done
+Log file: ./leap.log
+Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/ff-nucleic-OL21.lib
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Reading title:
+PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/ff-nucleic-OL21.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+OL21 force field for DNA (OL15 + alpha/gamma OL21), see http://ffol.upol.cz
+----- Source: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2
+----- Source of /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/cmd/leaprc.gaff2 done
+Log file: ./leap.log
+Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/gaff2.dat
+Reading title:
+AMBER General Force Field for organic molecules (Version 2.2.20, March 2021)
+Loading library: ./LIG.lib
+Loading parameters: ./LIG.frcmod
+Reading force field modification type file (frcmod)
+Reading title:
+Remark line goes here
+Checking Unit.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Warning!
+The unperturbed charge of the unit (-2.002000) is not zero.
+
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/teLeap: Note.
+Ignoring the warning from Unit Checking.
+
+Building topology.
+Building atom parameters.
+Building bond parameters.
+Building angle parameters.
+Building proper torsion parameters.
+Building improper torsion parameters.
+ total 35 improper torsions applied
+Building H-Bond parameters.
+Incorporating Non-Bonded adjustments.
+Not Marking per-residue atom chain types.
+Marking per-residue atom chain types.
+  (Residues lacking connect0/connect1 - 
+   these don't have chain types marked:
+
+	res	total affected
+
+	LIG	1
+  )
+ (no restraints)
+	Quit
+
+Exiting LEaP: Errors = 0; Warnings = 1; Notes = 1.
+environ_openmm 1
+MODULE_VERSION_STACK: 4.8.0
+MAILADDR: erbafa@biosustain.dtu.dk
+MANPATH: /lsf/10.1/man:/appl/latex/TexLive19/texmf/doc/man:::/opt/puppetlabs/puppet/share/man
+LSB_EXEC_CLUSTER: dcc
+HOSTNAME: n-62-31-1
+LSB_DOCKER_JOB_STARTTS: 1694523713
+LSB_EFFECTIVE_RSRCREQ: select[((serial_) && (type == any)) && ((model = XeonE5_2660v3 ||model = XeonE5_2650v4 ||model = XeonGold6126 ||model = XeonGold6226R ||model = XeonGold6142 ||model = XeonGold6342 ) && (type == any))] order[-slots:-maxslots] rusage[mem=4096.00] span[hosts=1] cu[type=enclosure:maxcus=1:pref=config] affinity[core(1)*1] 
+_LMFILES__modshare: /apps/dcc/etc/ModulesSL73/modulefiles/latex/TeXLive19:1
+GUROBI_PATH: /appl/gurobi/9.5.2/linux64
+LSF_LIM_API_NTRIES: 1
+LSF_LOGDIR: /var/log/lsf
+MODULEPATH_modshare: /appl/Modules/versions:1:/apps/dcc/etc/Modules$DCC_MODULE_SUFFIX/modulefiles:1:/appl/Modules/$MODULE_VERSION/modulefiles:1
+DOTNET_CLI_TELEMETRY_OPTOUT: 1
+LSB_BATCH_JID: 17724795
+MODULES_CMD: /appl/Modules/4.8.0/libexec/modulecmd.tcl
+HISTSIZE: 1000
+RM_CPUTASK1: 12
+LS_EXECCWD: /zhome/2e/2/164651/iGEM/dtu-denmark/heidelberg_maws
+LSB_TRAPSIGS: trap # 15 10 12 2 1
+OPENBLAS_NUM_THREADS: 1
+I_MPI_SHM_LMT: shm
+CONDA_SHLVL: 1
+LS_JOBPID: 13282
+LSB_ERRORFILE: maws_try_cores_17724795.err
+HEADNODE: hnode41
+CONDA_PROMPT_MODIFIER: (base) 
+LSB_JOBRES_CALLBACK: 51023@n-62-31-1
+LSB_MAX_NUM_PROCESSORS: 1
+OPENBLAS_MAIN_FREE: 1
+LSF_SERVERDIR: /lsf/10.1/linux3.10-glibc2.17-x86_64/etc
+LSB_JOB_EXECUSER: s212514
+LSB_JOBID: 17724795
+MAILNAME: Eric Bautista Farrerons
+LSB_JOBRES_PID: 13282
+LSB_JOBNAME: maws_try_cores
+BSUB_BLOCK_EXEC_HOST: 
+LSF_LIBDIR: /lsf/10.1/linux3.10-glibc2.17-x86_64/lib
+QT_GRAPHICSSYSTEM_CHECKED: 1
+ROCR_VISIBLE_DEVICES: 
+USER: s212514
+LSB_PROJECT_NAME: default
+LD_LIBRARY_PATH: /lsf/10.1/linux3.10-glibc2.17-x86_64/lib:/appl/gurobi/9.5.2/linux64/lib
+SBD_KRB5CCNAME_VAL: 
+LSB_EEXEC_REAL_UID: 
+LSB_HMS_TIME_FORMAT: y
+CONDA_EXE: /zhome/2e/2/164651/miniconda3/bin/conda
+ENV: /appl/Modules/4.8.0/init/profile.sh
+MODULES_LMALTNAME: latex/TeXLive19&latex/default&latex
+HOSTTYPE: X86_64
+LSB_CG_MEMLIMIT: 0x100000000
+NODE_EXTRA: 
+MALLOC_ARENA_MAX: 4
+LS_EXEC_T: START
+PAGER: less
+LSB_SUB_RES_REQ: {select[serial_] rusage[mem=4096.00] span[hosts=1]} || {select[!serial_] rusage[mem=4096.00] span[hosts=1]}
+LS_SUBCWD: /zhome/2e/2/164651/iGEM/dtu-denmark/heidelberg_maws
+LSB_HOSTS: n-62-31-1
+LSB_UNIXGROUP_INT: s21
+NODE_TYPE: hpc
+ANS_IGNOREOS: 1
+_CE_CONDA: 
+HIP_VISIBLE_DEVICES: 
+LSB_JOBFILENAME: /zhome/2e/2/164651/.lsbatch/1694523713.17724795
+MAILUSER: s212514
+PATH: /zhome/2e/2/164651/miniconda3/envs/maws_p3/bin:/zhome/2e/2/164651/miniconda3/bin:/zhome/2e/2/164651/miniconda3/condabin:/lsf/local/bin:/lsf/10.1/linux3.10-glibc2.17-x86_64/etc:/lsf/10.1/linux3.10-glibc2.17-x86_64/bin:/appl/latex/TexLive19/bin/x86_64-linux:/appl/Modules/4.8.0/bin:/apps/dcc/bin:/usr/bin:/bin:/usr/local/bin:/opt/puppetlabs/bin:.:/appl/gurobi/9.5.2/linux64/bin
+LSB_JOBINDEX: 0
+MAIL: /zhome/2e/2/164651/Maildir/
+MODULE_VERSION: 4.8.0
+CUDA_VISIBLE_DEVICES_ORIG: 
+CPUTYPE: XeonGold6126
+I_MPI_FABRICS_LIST: ofa
+LSB_EXIT_PRE_ABORT: 99
+LSB_JOBEXIT_STAT: 0
+CONDA_PREFIX: /zhome/2e/2/164651/miniconda3/envs/maws_p3
+PWD: /zhome/2e/2/164651/iGEM/dtu-denmark/heidelberg_maws
+CUDA_VISIBLE_DEVICES: 
+_LMFILES_: /apps/dcc/etc/ModulesSL73/modulefiles/latex/TeXLive19
+LSB_BJOBS_FORMAT: jobid: user: queue: name: slots:- stat: start_time: time_left:
+LSB_RES_GET_FANOUT_INFO: Y
+LANG: C
+LSB_CHKFILENAME: /zhome/2e/2/164651/.lsbatch/1694523713.17724795
+MODULEPATH: /appl/Modules/versions:/appl/Modules/$MODULE_VERSION/modulefiles:/apps/dcc/etc/Modules$DCC_MODULE_SUFFIX/modulefiles
+LSB_DJOB_HOSTFILE: /zhome/2e/2/164651/.lsbatch/1694523713.17724795.hostfile
+LOADEDMODULES: latex/TeXLive19
+LSB_JOB_STARTER: /bin/bash -l -c "%USRCMD"
+PS1: () 
+LSF_JOB_TIMESTAMP_VALUE: 1694523713
+GUROBI_HOME: /appl/gurobi/9.5.2/linux64
+LSB_AFFINITY_HOSTFILE: /zhome/2e/2/164651/.lsbatch/1694523713.17724795.hostAffinityFile
+LSB_DJOB_NUMPROC: 1
+LSF_BINDIR: /lsf/10.1/linux3.10-glibc2.17-x86_64/bin
+LSB_EXEC_HOSTTYPE: X86_64
+HISTCONTROL: ignoredups
+MAILHOST: student.dtu.dk
+SSH_ASKPASS: /usr/libexec/openssh/gnome-ssh-askpass
+_CE_M: 
+CPUTYPEV: XeonGold6126
+SHLVL: 3
+HOME: /zhome/2e/2/164651
+PATH_modshare: /apps/dcc/bin:1:/bin:1:/usr/bin:1:/appl/latex/TexLive19/bin/x86_64-linux:1:/appl/Modules/4.8.0/bin:1:/usr/local/bin:1
+CUDA_MPS_LOG_DIRECTORY: /tmp
+LESSCHARSET: latin1
+JOB_TERMINATE_INTERVAL: 10
+LSB_ACCT_FILE: /tmp/17724795.tmpdir/.1694523713.17724795.acct
+CPUSOCKETS: 2
+CPUVENDOR: GenuineIntel
+DCC_PROFILE: 20100806
+BINARY_TYPE_HPC: 
+LSB_SUB_HOST: gbarlogin2
+MANPATH_modshare: :1:/appl/latex/TexLive19/texmf/doc/man:1
+__LSF_JOB_TMPDIR__: /tmp/17724795.tmpdir
+LSB_SUB_USER: s212514
+LSFUSER: s212514
+BASH_ENV: /appl/Modules/4.8.0/init/bash
+LSB_OUTDIR: /zhome/2e/2/164651/iGEM/dtu-denmark/heidelberg_maws
+LSB_QUEUE: hpc
+LSB_MCPU_HOSTS: n-62-31-1 1 
+LSB_OUTPUTFILE: maws_try_cores_17724795.out
+LOGNAME: s212514
+MODULES_PAGER: 
+CONDA_PYTHON_EXE: /zhome/2e/2/164651/miniconda3/bin/python
+CVS_RSH: ssh
+VISUAL: emacs
+GPU_DEVICE_ORDINAL: 
+XDG_DATA_DIRS: /zhome/2e/2/164651/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
+MODULES_LMALTNAME_modshare: latex/TeXLive19&latex/default&latex:1
+LC_CTYPE: en_US.utf8
+LSB_ECHKPNT_RSH_CMD: ssh
+MODULESHOME: /appl/Modules/4.8.0
+LSF_CGROUP_TOPDIR_KEY: dcc
+BLACKHOLE: /dtu/blackhole/0b/164651
+OMP_NUM_THREADS: 1
+LESSOPEN: ||/usr/bin/lesspipe.sh %s
+CONDA_DEFAULT_ENV: base
+LOADEDMODULES_modshare: latex/TeXLive19:1
+LSB_XFER_OP: 
+CVSEDITOR: nano -w
+LSB_EEXEC_REAL_GID: 
+LSB_BIND_CPU_LIST: 12
+LSF_ENVDIR: /lsf/conf
+DCC_ETC_PROFILE_LOADED: 1
+LSB_DJOB_RANKFILE: /zhome/2e/2/164651/.lsbatch/1694523713.17724795.hostfile
+LSF_EGO_ENVDIR: /lsf/conf/ego/dcc/kernel
+DCC_MODULE_SUFFIX: SL73
+BASH_FUNC_module(): () {  unset _mlshdbg;
+ if [ "${MODULES_SILENT_SHELL_DEBUG:-0}" = '1' ]; then
+ case "$-" in 
+ *v*x*)
+ set +vx;
+ _mlshdbg='vx'
+ ;;
+ *v*)
+ set +v;
+ _mlshdbg='v'
+ ;;
+ *x*)
+ set +x;
+ _mlshdbg='x'
+ ;;
+ *)
+ _mlshdbg=''
+ ;;
+ esac;
+ fi;
+ unset _mlre _mlIFS;
+ if [ -n "${IFS+x}" ]; then
+ _mlIFS=$IFS;
+ fi;
+ IFS=' ';
+ for _mlv in ${MODULES_RUN_QUARANTINE:-};
+ do
+ if [ "${_mlv}" = "${_mlv##*[!A-Za-z0-9_]}" -a "${_mlv}" = "${_mlv#[0-9]}" ]; then
+ if [ -n "`eval 'echo ${'$_mlv'+x}'`" ]; then
+ _mlre="${_mlre:-}${_mlv}_modquar='`eval 'echo ${'$_mlv'}'`' ";
+ fi;
+ _mlrv="MODULES_RUNENV_${_mlv}";
+ _mlre="${_mlre:-}${_mlv}='`eval 'echo ${'$_mlrv':-}'`' ";
+ fi;
+ done;
+ if [ -n "${_mlre:-}" ]; then
+ eval `eval ${_mlre} /usr/bin/tclsh /appl/Modules/4.8.0/libexec/modulecmd.tcl bash '"$@"'`;
+ else
+ eval `/usr/bin/tclsh /appl/Modules/4.8.0/libexec/modulecmd.tcl bash "$@"`;
+ fi;
+ _mlstatus=$?;
+ if [ -n "${_mlIFS+x}" ]; then
+ IFS=$_mlIFS;
+ else
+ unset IFS;
+ fi;
+ unset _mlre _mlv _mlrv _mlIFS;
+ if [ -n "${_mlshdbg:-}" ]; then
+ set -$_mlshdbg;
+ fi;
+ unset _mlshdbg;
+ return $_mlstatus
+}
+BASH_FUNC_ml(): () {  module ml "$@"
+}
+_: /zhome/2e/2/164651/miniconda3/envs/maws_p3/bin/python
+OPENMM_CPU_THREADS: 1
+combination ./LIG
+combination ./LIG
+INTO LEAP ---------------------------------------------------------------------
+OUT OF LEAP -------------------------------------------------------------------
+6297535.14160877
+665.6683774166936
+165.8959616417776
+136.86102024012564
+98.69314555485067
+INTO LEAP ---------------------------------------------------------------------
+OUT OF LEAP -------------------------------------------------------------------
+653507.8285757233
+430.1447317617676
+327.5367224355804
+INTO LEAP ---------------------------------------------------------------------
+OUT OF LEAP -------------------------------------------------------------------
+2567660.8225059267
+747.3115333945714
+686.2786837269584
+576.8546446428409
+INTO LEAP ---------------------------------------------------------------------
+OUT OF LEAP -------------------------------------------------------------------
+4363761.761982733
+280.5249774447796
+-9.914216274082662
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+76972534862.15126
+4658.015166811038
+4561.860645769125
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+2735159.583078703
+79145.5916954586
+3252.2709164601324
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+15713469.51179626
+753.5326123208929
+277.00382324689417
+-350.13538315717244
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+1566780.2702189395
+775.1910486398872
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+86238492.01715298
+4070.151805337803
+-190.9139334627086
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+2114191.9559251685
+359591.1905373119
+63071.627986883796
+60925.31603460516
+33244.038988918765
+3305.8079222392194
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+2685890631182188.0
+-763.4676030918732
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+974038.4695237167
+2231.4808605512035
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+18778283250295.32
+1535244.5930313903
+490521.04159325996
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+10712252.232169125
+135807.3636015606
+-1276.8448948849318
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+3661810506.20793
+34172.366802414916
+4959.712455891189
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+24089872666.472557
+61305.34293722736
+50437.79174257013
+47761.80594508155
+-994.8445974646952
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+4960386237886.707
+2994.5732096275624
+-1335.0521763290476
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+5002630770.830894
+8594925.128947718
+44026.27595313377
+35684.856524450835
+1544.994100359404
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+325071.68952538713
+-1615.7304274728058
+-1795.871106400976
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+INTO LEAP ------------------------------------------------------------------------------
+OUT OF LEAP ----------------------------------------------------------------------------
+472808.7430452573
+45777.81012754243
+2049.343701480627
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@hpc.dtu.dk>
+Subject: Job 17724795: <maws_try_cores> in cluster <dcc> Done
+
+Job <maws_try_cores> was submitted from host <gbarlogin2> by user <s212514> in cluster <dcc> at Tue Sep 12 15:01:53 2023
+Job was executed on host(s) <n-62-31-1>, in queue <hpc>, as user <s212514> in cluster <dcc> at Tue Sep 12 15:01:53 2023
+</zhome/2e/2/164651> was used as the home directory.
+</zhome/2e/2/164651/iGEM/dtu-denmark/heidelberg_maws> was used as the working directory.
+Started at Tue Sep 12 15:01:53 2023
+Terminated at Tue Sep 12 15:09:55 2023
+Results reported at Tue Sep 12 15:09:55 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/sh 
+### General options 
+### -- specify queue -- 
+#BSUB -q hpc
+### -- set the job Name -- 
+#BSUB -J maws_try_cores
+### -- ask for number of cores (default: 1) -- 
+#BSUB -n 1
+### -- specify that the cores must be on the same host -- 
+#BSUB -R "span[hosts=1]"
+### -- specify that we need 4GB of memory per core/slot -- 
+#BSUB -R "rusage[mem=4GB]"
+### -- specify that we want the job to get killed if it exceeds 3 GB per core/slot -- 
+#BSUB -M 4GB
+### -- set walltime limit: hh:mm -- 
+#BSUB -W 71:59
+### -- set the email address -- 
+# please uncomment the following line and put in your e-mail address,
+# if you want to receive e-mail notifications on a non-default address
+##BSUB -u your_email_address
+### -- send notification at start -- 
+##BSUB -B 
+### -- send notification at completion -- 
+##BSUB -N 
+### -- Specify the output and error file. %J is the job-id -- 
+### -- -o and -e mean append, -oo and -eo mean overwrite -- 
+#BSUB -o maws_try_cores_%J.out 
+#BSUB -e maws_try_cores_%J.err 
+
+# here follow the commands you want to execute with input.in as the input file
+
+# Path to your Conda environment (replace with the actual path)
+conda_env_path="/zhome/2e/2/164651/miniconda3/envs/maws_p3"
+
+# Set environment variables to activate the Conda environment
+export CONDA_PREFIX="$conda_env_path"
+export PATH="$conda_env_path/bin:$PATH"
+export PS1="($maws_p3) $PS1"
+
+# Check it is using the conda env
+result=$(which python)
+echo "$result"
+
+# Run MAWS
+python MAWS2023.py -p pfoa.pdb -n maws_try_cores -nt 3 -ta DNA -tm organic -cenv maws_p3 -c1 10 -c2 10
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   443.63 sec.
+    Max Memory :                                 169 MB
+    Average Memory :                             129.00 MB
+    Total Requested Memory :                     4096.00 MB
+    Delta Memory :                               3927.00 MB
+    Max Swap :                                   -
+    Max Processes :                              8
+    Max Threads :                                197
+    Run time :                                   580 sec.
+    Turnaround time :                            482 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <maws_try_cores_17724795.err> for stderr output of this job.
+
