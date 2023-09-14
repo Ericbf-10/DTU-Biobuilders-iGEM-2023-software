@@ -1,0 +1,30 @@
+/zhome/2e/2/164651/iGEM/heidelberg_maws/Kernels.py:12: NumbaDeprecationWarning: The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
+  def rotateKernel(positions, element, axis, angle):
+/zhome/2e/2/164651/iGEM/heidelberg_maws/Kernels.py:33: NumbaDeprecationWarning: The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
+  def translateKernel(positions, element, shift):
+/zhome/2e/2/164651/iGEM/heidelberg_maws/Kernels.py:40: NumbaDeprecationWarning: The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
+  def centerOfMass(positions):
+/zhome/2e/2/164651/iGEM/heidelberg_maws/Kernels.py:44: NumbaDeprecationWarning: The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
+  def radius(center, positions):
+/zhome/2e/2/164651/iGEM/heidelberg_maws/Kernels.py:48: NumbaDeprecationWarning: The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
+  def kullbackLeiblerDivergenceKernel(sample, reference_sample):
+/zhome/2e/2/164651/iGEM/heidelberg_maws/Kernels.py:52: NumbaDeprecationWarning: The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
+  def EntropyKernel(sample):
+/zhome/2e/2/164651/iGEM/heidelberg_maws/Kernels.py:59: NumbaDeprecationWarning: The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
+  def ZPS(sample, beta=0.001):
+/zhome/2e/2/164651/iGEM/heidelberg_maws/Kernels.py:68: NumbaDeprecationWarning: The 'nopython' keyword argument was not supplied to the 'numba.jit' decorator. The implicit default value for this argument is currently False, but it will be changed to True in Numba 0.59.0. See https://numba.readthedocs.io/en/stable/reference/deprecation.html#deprecation-of-object-mode-fall-back-behaviour-when-using-jit for details.
+  def S(sample, beta=0.001):
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/lib/python3.9/site-packages/openmm/app/internal/amber_file_parser.py:1165: UserWarning: Non-optimal GB parameters detected for GB model OBC1
+  warnings.warn(
+/zhome/2e/2/164651/miniconda3/envs/maws_p3/lib/python3.9/site-packages/openmm/app/internal/amber_file_parser.py:1165: UserWarning: Non-optimal GB parameters detected for GB model OBC1
+  warnings.warn(
+Traceback (most recent call last):
+  File "/zhome/2e/2/164651/iGEM/heidelberg_maws/MAWS2017.py", line 155, in <module>
+    aptamer.translate_global(orientation[0:3]*unit.angstrom)
+  File "/zhome/2e/2/164651/iGEM/heidelberg_maws/Complex.py", line 195, in translate_global
+    self.complex.translate_global(self.element, shift)
+  File "/zhome/2e/2/164651/iGEM/heidelberg_maws/Complex.py", line 432, in translate_global
+    pos[j] += vec_shift
+  File "/zhome/2e/2/164651/miniconda3/envs/maws_p3/lib/python3.9/site-packages/openmm/unit/quantity.py", line 735, in __getitem__
+    assert not is_quantity(self._value[key])
+IndexError: list index out of range
