@@ -1,0 +1,11 @@
+name: maws_env
+channels:
+  - defaults
+dependencies:
+  - python=3.9.17
+  - numba=0.57.1
+  - openmm=8.0.0
+  - mpmath=1.2.1
+  - ambertools=23.3
+  - ipykernel=6.19.2
+prefix: /zhome/2e/2/164651/miniconda3/envs/maws_p3
