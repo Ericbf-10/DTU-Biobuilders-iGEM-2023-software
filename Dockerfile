@@ -11,12 +11,12 @@ ENV PATH=$PATH:/miniconda/condabin:/miniconda/bin
 RUN conda create --name AptaLoop
 RUN conda activate AptaLoop
 
-# Install required packages into the 'myenv' environment using pip
+# Install Jupyter Notebook for viewing code
+RUN pip install jupyterhub jupyterlab notebook jupyter-lsp
+
+# Install required packages for folding sequence
 RUN pip install viennarna==2.6.3
 RUN pip install rna==0.11.0
-RUN pip install jupyterhub==1.1.0
-RUN pip install jupyterlab notebook==6.0.3
-RUN pip install jupyterlab==2.1.5
 RUN pip install requests==2.31.0
 
 # Install AutoDock Vina for docking simulation
@@ -29,16 +29,13 @@ RUN brew install GROMACS
 RUN conda install -c conda-forge ambertools=23
 RUN conda update -c conda-forge ambertools
 
-
-
 # Setup Jupyter Notebook
 RUN useradd -ms /bin/bash jupyter
 USER jupyter
 WORKDIR notebooks
 EXPOSE 8888
 
-# Define the command to run when the container starts
+# Run Jupyter
 CMD ["jupyter", "notebook", "--allow-root", "--ip=0.0.0.0", "--port=8888"]
-
 RUN docker run -p 8888:8888 -v ./notebooks:/notebooks my-miniconda-image
 
