@@ -7,6 +7,10 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda
 ENV PATH=$PATH:/miniconda/condabin:/miniconda/bin
 
+# Create AptaLoop environment
+RUN conda create --name AptaLoop
+RUN conda activate AptaLoop
+
 # Install required packages into the 'myenv' environment using pip
 RUN pip install viennarna==2.6.3
 RUN pip install rna==0.11.0
@@ -14,6 +18,18 @@ RUN pip install jupyterhub==1.1.0
 RUN pip install jupyterlab notebook==6.0.3
 RUN pip install jupyterlab==2.1.5
 RUN pip install requests==2.31.0
+
+# Install AutoDock Vina for docking simulation
+# TODO: Put new code here
+
+# Install GROMACS, AmberTools for molecular dynamics
+RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+RUN brew install GROMACS
+
+RUN conda install -c conda-forge ambertools=23
+RUN conda update -c conda-forge ambertools
+
+
 
 # Setup Jupyter Notebook
 RUN useradd -ms /bin/bash jupyter
