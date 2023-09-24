@@ -17,7 +17,10 @@ RUN pip install jupyterhub jupyterlab notebook jupyter-lsp
 RUN pip install viennarna==2.6.3 rna==0.11.0 requests==2.31.0
 
 # Install AutoDock Vina for docking simulation
-# TODO: Put new code here
+RUN apt-get update && apt-get install -y autodock-vina
+
+# Install OpenBabel for chemical file format conversion
+RUN apt-get install -y openbabel
 
 # Install GROMACS, AmberTools for molecular dynamics
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
