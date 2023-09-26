@@ -22,6 +22,10 @@ RUN pip install jupyterlab
 RUN pip install viennarna==2.6.3
 
 # Install AutoDock Vina for docking simulation
+RUN apt-get update && apt-get install -y autodock-vina
+
+# Install OpenBabel for chemical file format conversion
+RUN apt-get install -y openbabel
 
 
 # Install GROMACS, AmberTools for molecular dynamics
