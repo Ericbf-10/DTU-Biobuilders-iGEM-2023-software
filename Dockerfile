@@ -7,34 +7,36 @@ RUN wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 RUN bash Miniconda3-latest-Linux-x86_64.sh -b -p /miniconda
 ENV PATH=$PATH:/miniconda/condabin:/miniconda/bin
 
+# Install essentials like git and brew
+RUN apt-get update && apt-get install -y build-essential curl file git
+RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+ENV PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
+
 # Create AptaLoop environment
 RUN conda create --name AptaLoop
 
 # Install Jupyter Notebook for viewing code
-RUN pip install jupyterhub jupyterlab notebook jupyter-lsp
+RUN pip install jupyterlab
 
 # Install required packages for folding sequence
-RUN pip install viennarna==2.6.3 rna==0.11.0 requests==2.31.0
+RUN pip install viennarna==2.6.3
 
 # Install AutoDock Vina for docking simulation
-# TODO: Put new code here
+
 
 # Install GROMACS, AmberTools for molecular dynamics
-RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-RUN brew install GROMACS
-
 RUN conda install -c conda-forge ambertools=23
-RUN conda update -c conda-forge ambertools
+RUN brew install gromacs
 
 # Download code from gitlab
 RUN git clone https://gitlab.igem.org/2023/software-tools/dtu-denmark.git
 
 # Setup Jupyter Notebook
 RUN useradd -ms /bin/bash jupyter
-RUN mkdir /notebooks && chown jupyter:jupyter /notebooks
+RUN chown jupyter:jupyter /dtu-denmark/notebooks
 USER jupyter
-WORKDIR notebooks
+WORKDIR /dtu-denmark/notebooks
 EXPOSE 8888
 
 # Run Jupyter
-CMD ["jupyter", "notebook", "--allow-root", "--ip=0.0.0.0", "--port=8888"]
+CMD ["jupyter", "lab", "--allow-root", "--ip=0.0.0.0", "--port=8888"]
