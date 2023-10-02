@@ -7,7 +7,28 @@ This repository contains code for aptamer design _in silico_ developed by the **
 1. Docking
 1. Molecular Dynamics
 
-We decided to use a **Jupyter Notebook** format to make sure that our code is well documented and easy to use for external people, and we encapsulated the pipeline in a docker container to ensure reproducibility.
+We decided to use a **Jupyter Notebook** format to make sure that our code is well documented and easy to use for external people, and we encapsulated the pipeline in a docker container to ensure reproducibility. The global structure of the directory is as follows (some files have been skipped for the sake of comprehension):
+
+```
+dtu-denmark
+├── data
+├── heidelberg_maws
+│   └── MAWS2023.py
+├── notebooks
+│   ├── 1_sequence_3d
+│   │   ├── 1_create_sequence_file.ipynb
+│   │   └── 2_aptamer_folding_3dDNA.ipynb
+│   ├── 2_maws
+│   │   └── maws.ipynb
+│   ├── 3_docking
+│   │   └── docking.ipynb
+│   └── 4_molecular_dynamics
+│       └── molecular_dynamics.ipynb
+├── Dockerfile
+├── LICENSE
+├── README.md
+└── requirements.txt
+```
 
 The global aim of this pipeline is to provide the necessary tools to design DNA or RNA aptamers to target a specific molecule (protein, organic or lipid), predict the secondary and tertiary structure, predict the interaction position between them (docking) and simulate the molecular dynamics. The results of these analyses can be useful to guide the wet lab efforts in finding the **best possible aptamer sequence** for the desired target molecule.
 ### Secondary/tertiary structure prediction
