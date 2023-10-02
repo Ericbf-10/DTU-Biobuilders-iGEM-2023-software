@@ -1,7 +1,7 @@
 # Team DTU-Denmark 2023 Software Tool: AptaLoop
 
 ## Description
-This repository contains code for aptamer design _in silico_ developed by the **DTU Biobuilders 2023** iGEM team. The AptaLoop pipeline consists of 4 different modules, where the first 2 are mutually exclusive and the rest are meant to be used sequentially: 
+This repository contains code for aptamer design _in silico_ developed by the **DTU Biobuilders 2023** iGEM team. The AptaLoop pipeline consists of 4 different modules: 
 1. Secondary/tertiary structure prediction
 1. Making Aptamers Without Selex (MAWS)
 1. Docking
@@ -62,44 +62,25 @@ Follow these steps in the terminal:
 ```sudo docker run -it -p 8888:8888 teheavy/dtu-biobuilders-aptaloop:test_new```
 
 ## Usage
-There are 2 possibilities of using the AptaLoop pipeline:
-### 1. Already having an aptamer sequence
-If the user already has an aptamer sequence, the modules to run are 1, 3 and 4.
-#### Module 1: 1_sequence_3d
+As mentioned before, the AptaLoop pipeline has 4 modules. The modules are meant to be run sequentially if the user wants to make a thorough analysis of the aptamer-molecule complex interaction and dynamics, but it is also possible to run them individually. Each module usage is described below:
+### Module 1: 1_sequence_3d
 1. Run the NB **1_create_sequence_file.ipynb** to create a sequence PDB file.
 - Input: DNA or RNA string.
 - Output: PDB file.
-2. Then run the NB: **2_aptamer_folding_3dDNA.ipynb** to get the secondary and tertiary structure predictions for the given aptamer sequence.
+2. Run the NB: **2_aptamer_folding_3dDNA.ipynb** to get the secondary and tertiary structure predictions for the given aptamer sequence.
 - Input: FASTA file of aptamer sequence(s).
 - Output: FASTA file of secondary structure prediction(s) and tertiary structure prediction(s).
-#### Module 3: 3_docking
-Run the NB **docking.ipynb** to perform a docking simulation between your aptamer and ligand molecule.
-- Input: 
-1. PDB file for the aptamer.
-1. SDF or PDB file for the ligand.
-- Output: PDBQT file.
-#### Module 4: 4_molecular_dynamics
-Run the NB **molecular_dynamics.ipynb** to perform a molecular dynamics simulation of the aptamer-molecule complex.
-- Input: 
-1. PDB file containing the aptamer-molecule complex.
-1. GROMACS parameter and configuration files (ions.mdp, minim.mdp, nvt.mdp, npt.mdp, md.mdp).
-- Output: 
-1. Processed and solvated molecular structures in GROMACS formats.
-1. Energy, temperature, pressure, and density profiles during the simulation.
-1. Trajectory and analysis files including RMSD, gyration, and more.
-### 2. Not having an aptamer sequence
-If the user does not have an aptamer sequence yet, the modules to run are 2, 3 and 4.
-#### Module 2: 2_maws
+### Module 2: 2_maws
 Run the NB **maws.ipynb** to generate the DNA or RNA aptamer that best binds your target molecule.
 - Input: PDB file of target molecule.
 - Output: PDB file of aptamer + target molecule.
-#### Module 3: 3_docking
+### Module 3: 3_docking
 Run the NB **docking.ipynb** to perform a docking simulation between your aptamer and ligand molecule.
 - Input: 
 1. PDB file for the aptamer.
 1. SDF or PDB file for the ligand.
 - Output: PDBQT file.
-#### Module 4: 4_molecular_dynamics
+### Module 4: 4_molecular_dynamics
 Run the NB **molecular_dynamics.ipynb** to perform a molecular dynamics simulation of the aptamer-molecule complex.
 - Input: 
 1. PDB file containing the aptamer-molecule complex.
