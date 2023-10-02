@@ -67,7 +67,7 @@ As mentioned before, the AptaLoop pipeline has 4 modules. The modules are meant 
 1. Run the NB **1_create_sequence_file.ipynb** to create a sequence PDB file.
 - Input: DNA or RNA string.
 - Output: PDB file.
-2. Run the NB: **2_aptamer_folding_3dDNA.ipynb** to get the secondary and tertiary structure predictions for the given aptamer sequence.
+2. Run the NB **2_aptamer_folding_3dDNA.ipynb** to get the secondary and tertiary structure predictions for the given aptamer sequence.
 - Input: FASTA file of aptamer sequence(s).
 - Output: FASTA file of secondary structure prediction(s) and tertiary structure prediction(s).
 ### Module 2: 2_maws
