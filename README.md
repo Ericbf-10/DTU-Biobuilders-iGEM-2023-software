@@ -62,7 +62,7 @@ Follow these steps in the terminal:
 ```sudo docker run -it -p 8888:8888 teheavy/dtu-biobuilders-aptaloop:test_new```
 
 ## Usage
-As mentioned before, the AptaLoop pipeline has 4 modules. The modules are meant to be run sequentially if the user wants to make a thorough analysis of the aptamer-molecule complex interaction and dynamics, but it is also possible to run them individually. Each module usage is described below:
+As mentioned before, the AptaLoop pipeline has 4 modules. The modules are meant to be run sequentially if the user wants to make a thorough analysis of the aptamer-molecule complex interaction and dynamics, but it is also possible to run them individually. Module 1 should be run if the user already has an aptamer sequence they would like to test, and Module 2 should be run if the user wants to create the aptamer sequence from scratch. Each module usage is described below:
 ### Module 1: 1_sequence_3d
 1. Run the NB **1_create_sequence_file.ipynb** to create a sequence PDB file.
 - Input: DNA or RNA string.
