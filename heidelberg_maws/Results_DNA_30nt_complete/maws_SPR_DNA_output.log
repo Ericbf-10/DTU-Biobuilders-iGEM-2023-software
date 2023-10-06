@@ -1,0 +1,53 @@
+MAWS - Making Aptamers With Software
+Active version: 2.0 (released:_2017)
+Computational method: Kullback-Leibler
+Type of aptamer: DNA
+Type of ligand molecule: organic
+Job: maws_SPR_DNA
+Input file: pfoa.pdb
+Sample number in initial step: 5000
+Sample number per further steps: 5000
+Number of further steps: 30 (sequence length = 31)
+Value of beta: 0.01
+Start time: 2023-09-29 17:12:55.723358
+Force field selected for the aptamer: leaprc.DNA.OL21
+Force field selected for the ligand molecule: leaprc.gaff2
+Initialized succesfully!
+2023-09-29 17:15:48.680994: starting initial step for 'G'
+2023-09-29 17:17:32.398025: starting initial step for 'A'
+2023-09-29 17:19:13.445494: starting initial step for 'T'
+2023-09-29 17:20:53.341018: starting initial step for 'C'
+2023-09-29 17:22:27.194732: Completed first step. Selected nucleotide: T
+2023-09-29 17:22:27.194761: Starting further steps to append 30 nucleotides
+2023-09-29 17:38:29.859332: Completed step 2. Selected sequence: T T
+2023-09-29 17:58:10.050831: Completed step 3. Selected sequence: C T T
+2023-09-29 18:21:44.950985: Completed step 4. Selected sequence: C C T T
+2023-09-29 18:50:39.776383: Completed step 5. Selected sequence: A C C T T
+2023-09-29 19:25:22.431249: Completed step 6. Selected sequence: A A C C T T
+2023-09-29 20:07:21.255222: Completed step 7. Selected sequence: C A A C C T T
+2023-09-29 20:57:22.107987: Completed step 8. Selected sequence: A C A A C C T T
+2023-09-29 21:56:21.925066: Completed step 9. Selected sequence: T A C A A C C T T
+2023-09-29 23:05:15.962699: Completed step 10. Selected sequence: G T A C A A C C T T
+2023-09-30 00:24:44.477327: Completed step 11. Selected sequence: C G T A C A A C C T T
+2023-09-30 01:55:14.802063: Completed step 12. Selected sequence: T C G T A C A A C C T T
+2023-09-30 03:38:29.814675: Completed step 13. Selected sequence: C T C G T A C A A C C T T
+2023-09-30 05:32:59.487723: Completed step 14. Selected sequence: C C T C G T A C A A C C T T
+2023-09-30 07:43:07.557233: Completed step 15. Selected sequence: C C C T C G T A C A A C C T T
+2023-09-30 10:05:28.816115: Completed step 16. Selected sequence: G C C C T C G T A C A A C C T T
+2023-09-30 12:44:46.079013: Completed step 17. Selected sequence: T G C C C T C G T A C A A C C T T
+2023-09-30 15:42:18.855846: Completed step 18. Selected sequence: G T G C C C T C G T A C A A C C T T
+2023-09-30 18:56:44.773313: Completed step 19. Selected sequence: A G T G C C C T C G T A C A A C C T T
+2023-09-30 22:31:26.704934: Completed step 20. Selected sequence: G A G T G C C C T C G T A C A A C C T T
+2023-10-01 02:28:24.858534: Completed step 21. Selected sequence: A G A G T G C C C T C G T A C A A C C T T
+2023-10-01 06:44:04.187387: Completed step 22. Selected sequence: A A G A G T G C C C T C G T A C A A C C T T
+2023-10-01 11:23:48.400857: Completed step 23. Selected sequence: A A A G A G T G C C C T C G T A C A A C C T T
+2023-10-01 16:17:38.824247: Completed step 24. Selected sequence: T A A A G A G T G C C C T C G T A C A A C C T T
+2023-10-01 21:43:56.863289: Completed step 25. Selected sequence: C T A A A G A G T G C C C T C G T A C A A C C T T
+2023-10-02 03:26:27.696452: Completed step 26. Selected sequence: A C T A A A G A G T G C C C T C G T A C A A C C T T
+2023-10-02 09:35:26.164210: Completed step 27. Selected sequence: G A C T A A A G A G T G C C C T C G T A C A A C C T T
+2023-10-02 16:13:22.614280: Completed step 28. Selected sequence: A G A C T A A A G A G T G C C C T C G T A C A A C C T T
+2023-10-02 23:24:18.110367: Completed step 29. Selected sequence: A A G A C T A A A G A G T G C C C T C G T A C A A C C T T
+2023-10-03 06:50:43.103272: Completed step 30. Selected sequence: T A A G A C T A A A G A G T G C C C T C G T A C A A C C T T
+2023-10-03 06:50:46.340966: Run completed. Thank you for using MAWS!
+
+Final sequence: T A A G A C T A A A G A G T G C C C T C G T A C A A C C T T

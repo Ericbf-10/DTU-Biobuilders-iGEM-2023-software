@@ -2,10 +2,10 @@
 
 ## Description
 This repository contains code for aptamer design _in silico_ developed by the **DTU Biobuilders 2023** iGEM team. The AptaLoop pipeline consists of 4 different modules: 
-1. Secondary/tertiary structure prediction
-1. Making Aptamers Without Selex (MAWS)
-1. Docking
-1. Molecular Dynamics
+1a. Secondary/tertiary structure prediction
+1b. Making Aptamers Without Selex (MAWS)
+2. Docking
+3. Molecular Dynamics
 
 We decided to use a **Jupyter Notebook** format to make sure that our code is well documented and easy to use for external people, and we encapsulated the pipeline in a docker container to ensure reproducibility. The global structure of the directory is as follows (some files have been skipped for the sake of comprehension):
 
@@ -15,14 +15,14 @@ dtu-denmark
 ├── heidelberg_maws
 │   └── MAWS2023.py
 ├── notebooks
-│   ├── 1_sequence_3d
+│   ├── 1a_sequence_3d
 │   │   ├── 1_create_sequence_file.ipynb
 │   │   └── 2_aptamer_folding_3dDNA.ipynb
-│   ├── 2_maws
+│   ├── 1b_maws
 │   │   └── maws.ipynb
-│   ├── 3_docking
+│   ├── 2_docking
 │   │   └── docking.ipynb
-│   └── 4_molecular_dynamics
+│   └── 3_molecular_dynamics
 │       └── molecular_dynamics.ipynb
 ├── Dockerfile
 ├── LICENSE
@@ -62,25 +62,25 @@ Follow these steps in the terminal:
 ```sudo docker run -it -p 8888:8888 teheavy/dtu-biobuilders-aptaloop:test_new```
 
 ## Usage
-As mentioned before, the AptaLoop pipeline has 4 modules. The modules are meant to be run sequentially if the user wants to make a thorough analysis of the aptamer-molecule complex interaction and dynamics, but it is also possible to run them individually. Module 1 should be run if the user already has an aptamer sequence they would like to test, and Module 2 should be run if the user wants to create the aptamer sequence from scratch. Each module usage is described below:
-### Module 1: 1_sequence_3d
+As mentioned before, the AptaLoop pipeline has 4 modules. The modules are meant to be run sequentially if the user wants to make a thorough analysis of the aptamer-molecule complex interaction and dynamics, but it is also possible to run them individually. Module 1a should be run if the user already has an aptamer sequence they would like to test, and Module 1b should be run if the user wants to create the aptamer sequence from scratch. Each module usage is described below:
+### Module 1a: 1a_sequence_3d
 1. Run the NB **1_create_sequence_file.ipynb** to create a sequence PDB file.
 - Input: DNA or RNA string.
 - Output: PDB file.
 2. Run the NB **2_aptamer_folding_3dDNA.ipynb** to get the secondary and tertiary structure predictions for the given aptamer sequence.
 - Input: FASTA file of aptamer sequence(s).
 - Output: FASTA file of secondary structure prediction(s) and tertiary structure prediction(s).
-### Module 2: 2_maws
+### Module 1b: 1b_maws
 Run the NB **maws.ipynb** to generate the DNA or RNA aptamer that best binds your target molecule.
 - Input: PDB file of target molecule.
 - Output: PDB file of aptamer + target molecule.
-### Module 3: 3_docking
+### Module 2: 2_docking
 Run the NB **docking.ipynb** to perform a docking simulation between your aptamer and ligand molecule.
 - Input: 
 1. PDB file for the aptamer.
 1. SDF or PDB file for the ligand.
 - Output: PDBQT file.
-### Module 4: 4_molecular_dynamics
+### Module 3: 3_molecular_dynamics
 Run the NB **molecular_dynamics.ipynb** to perform a molecular dynamics simulation of the aptamer-molecule complex.
 - Input: 
 1. PDB file containing the aptamer-molecule complex.

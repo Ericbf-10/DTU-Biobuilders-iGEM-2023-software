@@ -7,7 +7,7 @@
                 loadoff ./LIG.lib
 		loadamberparams ./LIG.frcmod 
                 
-                                        CHAIN0 = sequence {DG5 DT DG3}
+                                        CHAIN0 = sequence {DT5 DA DA DG DA DC DT DA DA DA DG DA DG DT DG DC DC DC DT DC DG DT DA DC DA DA DC DC DT DT3}
                                         
                                         CHAIN1 = sequence {LIG}
                                         
