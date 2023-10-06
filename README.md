@@ -63,24 +63,24 @@ Follow these steps in the terminal:
 
 ## Usage
 As mentioned before, the AptaLoop pipeline has 4 modules. The modules are meant to be run sequentially if the user wants to make a thorough analysis of the aptamer-molecule complex interaction and dynamics, but it is also possible to run them individually. Module 1a should be run if the user already has an aptamer sequence they would like to test, and Module 1b should be run if the user wants to create the aptamer sequence from scratch. Each module usage is described below:
-### Module 1a: 1a_sequence_3d
+### Module 1a: Sequence 3d
 1. Run the NB **1_create_sequence_file.ipynb** to create a sequence PDB file.
 - Input: DNA or RNA string.
 - Output: PDB file.
 2. Run the NB **2_aptamer_folding_3dDNA.ipynb** to get the secondary and tertiary structure predictions for the given aptamer sequence.
 - Input: FASTA file of aptamer sequence(s).
 - Output: FASTA file of secondary structure prediction(s) and tertiary structure prediction(s).
-### Module 1b: 1b_maws
+### Module 1b: MAWS
 Run the NB **maws.ipynb** to generate the DNA or RNA aptamer that best binds your target molecule.
 - Input: PDB file of target molecule.
 - Output: PDB file of aptamer + target molecule.
-### Module 2: 2_docking
+### Module 2: Docking
 Run the NB **docking.ipynb** to perform a docking simulation between your aptamer and ligand molecule.
 - Input: 
 1. PDB file for the aptamer.
 1. SDF or PDB file for the ligand.
 - Output: PDBQT file.
-### Module 3: 3_molecular_dynamics
+### Module 3: Molecular dynamics
 Run the NB **molecular_dynamics.ipynb** to perform a molecular dynamics simulation of the aptamer-molecule complex.
 - Input: 
 1. PDB file containing the aptamer-molecule complex.
