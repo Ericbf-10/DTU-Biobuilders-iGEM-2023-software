@@ -1,5 +1,6 @@
-name: maws_env
+name: AptaLoop
 channels:
+  - conda-forge
   - defaults
 dependencies:
   - python=3.9.17
