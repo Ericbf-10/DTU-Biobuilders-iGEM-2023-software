@@ -1,6 +1,7 @@
 name: AptaLoop
 channels:
-  - conda-forge
+  - bioconda
+  - conda-forge 
   - defaults
 dependencies:
   - python=3.9.17
@@ -9,4 +10,6 @@ dependencies:
   - mpmath=1.2.1
   - ambertools=23.3
   - ipykernel=6.19.2
-prefix: /zhome/2e/2/164651/miniconda3/envs/maws_p3
+  - jupyterlab=3.3.2
+  - viennarna==2.6.3
+prefix: ~/miniconda/envs/AptaLoop
