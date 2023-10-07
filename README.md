@@ -2,10 +2,14 @@
 
 ## Description
 This repository contains code for aptamer design _in silico_ developed by the **DTU Biobuilders 2023** iGEM team. The AptaLoop pipeline consists of 4 different modules: 
+
 1a. Secondary/tertiary structure prediction
+
 1b. Making Aptamers Without Selex (MAWS)
-2. Docking
-3. Molecular Dynamics
+
+2\. Docking
+
+3\. Molecular Dynamics
 
 We decided to use a **Jupyter Notebook** format to make sure that our code is well documented and easy to use for external people, and we encapsulated the pipeline in a docker container to ensure reproducibility. The global structure of the directory is as follows (some files have been skipped for the sake of comprehension):
 
