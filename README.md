@@ -88,8 +88,9 @@ Run the NB **maws.ipynb** to generate the DNA or RNA aptamer that best binds you
 ### Module 2: Docking
 Run the NB **docking.ipynb** to perform a docking simulation between your aptamer and ligand molecule.
 - Input: 
-1. PDB file for the aptamer.
-1. SDF or PDB file for the ligand.
+1. PDB file for the aptamer, located in the "data" directory.
+1. SDF or PDB file for the ligand, located in the "data" directory.
+2. It is necessary to specify the grid parameters (x_c, y_c, z_c, x_s,y_s, z_s), inside the notebook
 - Output: PDBQT file.
 ### Module 3: Molecular dynamics
 Run the NB **molecular_dynamics.ipynb** to perform a molecular dynamics simulation of the aptamer-molecule complex.
