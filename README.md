@@ -65,10 +65,10 @@ Follow these steps in the terminal:
 1. If you see **teheavy/dtu-biobuilders-aptaloop:test_new**, it means everything went well. Do the following to run the container:
 ```sudo docker run -it -p 8888:8888 teheavy/dtu-biobuilders-aptaloop:test_new```
 
-1. If everything was as expected, you should be located at `dtu-denmark/notebooks`, where you have all the notebooks to perform the analysis. Run the following to start a jupyter lab server:
+1. If everything was as expected, you should be located at `/dtu-denmark`. Run the following to start a jupyter lab server:
 ```jupyter lab --ip=0.0.0.0```
 
-1. Finally, you have to copy-paste one of the 2 URLs where you hosted the jupyter lab server (usually the second one works and the first one does not) into your favourite browser. When running the notebooks, remember to choose the kernel named `Python (AptaLoop)`. And that's it, happy coding!
+1. Finally, you have to copy-paste one of the 2 URLs where you hosted the jupyter lab server (usually the second one works and the first one does not) into your favourite browser. Once you are there, move to the `notebooks` directory, where you have all the notebooks to perform the analysis. When running the notebooks, remember to choose the kernel named `Python (AptaLoop)`. You can do that by clicking to the top right of the notebook, where it says `Python 3 (ipykernel)` and selecting `Python (AptaLoop)`. And that's it, happy coding!
 
 ## Usage
 It is very important that the user selects the kernel `Python (AptaLoop)` when running the notebooks, as it contains the packages needed to run them.

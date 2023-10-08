@@ -29,16 +29,6 @@ from openmm import unit
 from openmm import app
 import Space
 import os
-os.environ['OPENMM_CPU_THREADS'] = '1' # Set the number of threads to use for computation
-print("environ_openmm", os.getenv('OPENMM_CPU_THREADS'))
-
-# DEBUG
-# Get a dictionary of all environment variables
-env_variables = os.environ
-
-# Print all environment variables
-for key, value in env_variables.items():
-    print(f"{key}: {value}")
 
 #Parser
 parser = argparse.ArgumentParser()
@@ -52,7 +42,6 @@ parser.add_argument("-b", "--beta", type=float, default=0.01, help="Inverse temp
 parser.add_argument("-c1", "--firstchunksize", type=int, default=5000, help="Number of samples in the first MAWS step.")
 parser.add_argument("-c2", "--secondchunksize", type=int, default=5000, help="Number of samples in all subsequent MAWS steps.")
 args = parser.parse_args()
-
 
 #PARAMS
 JOB_NAME = args.name
@@ -86,12 +75,13 @@ output.write("Value of beta: {0}\n".format(BETA))
 output.write("Start time: {0}\n".format(str(datetime.now())))
 
 #Choose suitable force field file for aptamer
+script_path = os.getcwd()
 if ATPAMER_TYPE == "RNA":
-	xml_molecule = XMLStructure("RNA.xml") #Build Structure-object for RNA residues
+	xml_molecule = XMLStructure(os.path.join(script_path, "RNA.xml")) #Build Structure-object for RNA residues
 	nt_list = "GAUC"
 	force_field_aptamer = "leaprc.RNA.OL3"
 elif ATPAMER_TYPE == "DNA":
-	xml_molecule = XMLStructure("DNA.xml") #Build Structure-object for DNA residues
+	xml_molecule = XMLStructure(os.path.join(script_path, "DNA.xml")) #Build Structure-object for DNA residues
 	nt_list = "GATC"
 	force_field_aptamer = "leaprc.DNA.OL21"
 else: # Error handling

@@ -24,8 +24,27 @@ RUN apt-get update && apt-get install -y autodock-vina
 # Install OpenBabel for chemical file format conversion
 RUN apt-get install -y openbabel
 
-# Install GROMACS for molecular dynamics
-RUN brew install gromacs
+# Install dependencies for building GROMACS
+RUN apt-get update && apt-get install -y build-essential cmake curl
+
+# Download GROMACS source code, change 'version' to the version you need
+RUN curl -O https://ftp.gromacs.org/pub/gromacs/gromacs-version.tar.gz
+
+# Unpack GROMACS source code
+RUN tar -xf gromacs-version.tar.gz
+
+# Create build directory and move into it
+RUN mkdir /gromacs-version/build
+WORKDIR /gromacs-version/build
+
+# Configure and build GROMACS without rdtscp, afterwards cleanup
+RUN cmake .. -DGMX_BUILD_OWN_FFTW=ON -DGMX_USE_RDTSCP=OFF \
+    && make \
+    && make install \
+    && rm ../../gromacs-version.tar.gz \
+    && rm -rf ../../gromacs-version
+
+WORKDIR /dtu-denmark
 
 # Setup Jupyter Notebook
 RUN useradd -ms /bin/bash jupyter
