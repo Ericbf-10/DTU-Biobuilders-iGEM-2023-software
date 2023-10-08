@@ -49,7 +49,7 @@ The fourth and last module simulates the molecular dynamics of the interaction b
 ## Installation
 The easiest way to install the required dependencies is through Docker. Docker is a platform for developing, shipping, and running applications inside containers. It enables consistent deployment across different systems, simplifying application management and ensuring compatibility. 
 
-So first, you need to install Docker Desktop from the official Docker website: [Docker Desktop](https://www.docker.com/products/docker-desktop). Select the version depending on your Operating System and follow the instructions to complete the installation.
+So first, you need to install Docker Desktop from the official Docker website: [Docker Desktop](https://www.docker.com/products/docker-desktop). Select the version depending on your Operating System and follow the instructions to complete the installation. Then, open the application.
 ### Verification
 To verify that Docker is installed and running, open a terminal or command prompt and run the following command: ```docker --version```
 
@@ -62,10 +62,17 @@ Follow these steps in the terminal:
 1. Then check if you pulled the image correctly:
 ```docker images```
 
-1. If you see **teheavy/dtu-biobuilders-aptaloop:test_new**, it means everything went well. Finally, do the following to run the container:
+1. If you see **teheavy/dtu-biobuilders-aptaloop:test_new**, it means everything went well. Do the following to run the container:
 ```sudo docker run -it -p 8888:8888 teheavy/dtu-biobuilders-aptaloop:test_new```
 
+1. If everything was as expected, you should be located at `dtu-denmark/notebooks`, where you have all the notebooks to perform the analysis. Run the following to start a jupyter lab server:
+```jupyter lab --ip=0.0.0.0```
+
+1. Finally, you have to copy-paste one of the 2 URLs where you hosted the jupyter lab server (usually the second one works and the first one does not) into your favourite browser. When running the notebooks, remember to choose the kernel named `Python (AptaLoop)`. And that's it, happy coding!
+
 ## Usage
+It is very important that the user selects the kernel `Python (AptaLoop)` when running the notebooks, as it contains the packages needed to run them.
+
 As mentioned before, the AptaLoop pipeline has 4 modules. The modules are meant to be run sequentially if the user wants to make a thorough analysis of the aptamer-molecule complex interaction and dynamics, but it is also possible to run them individually. Module 1a should be run if the user already has an aptamer sequence they would like to test, and Module 1b should be run if the user wants to create the aptamer sequence from scratch. Each module usage is described below:
 ### Module 1a: Sequence 3d
 1. Run the NB **1_create_sequence_file.ipynb** to create a sequence PDB file.

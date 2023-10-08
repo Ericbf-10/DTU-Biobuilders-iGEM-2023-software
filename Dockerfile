@@ -12,14 +12,11 @@ RUN apt-get update && apt-get install -y build-essential curl file git
 RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ENV PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
 
-# Create AptaLoop environment
-RUN conda create --name AptaLoop
+# Download code from gitlab
+RUN git clone https://gitlab.igem.org/2023/software-tools/dtu-denmark.git
 
-# Install Jupyter Notebook for viewing code
-RUN pip install jupyterlab
-
-# Install required packages for folding sequence
-RUN pip install viennarna==2.6.3
+# Create AptaLoop environment and activate
+RUN conda env create --file dtu-denmark/environment.yml
 
 # Install AutoDock Vina for docking simulation
 RUN apt-get update && apt-get install -y autodock-vina
@@ -27,20 +24,18 @@ RUN apt-get update && apt-get install -y autodock-vina
 # Install OpenBabel for chemical file format conversion
 RUN apt-get install -y openbabel
 
-
-# Install GROMACS, AmberTools for molecular dynamics
-RUN conda install -c conda-forge ambertools=23
+# Install GROMACS for molecular dynamics
 RUN brew install gromacs
-
-# Download code from gitlab
-RUN git clone https://gitlab.igem.org/2023/software-tools/dtu-denmark.git
 
 # Setup Jupyter Notebook
 RUN useradd -ms /bin/bash jupyter
-RUN chown jupyter:jupyter /dtu-denmark/notebooks
+RUN chown -R jupyter:jupyter /miniconda/envs/AptaLoop
+RUN chown -R jupyter:jupyter /dtu-denmark/notebooks
+RUN chmod 777 /dtu-denmark/notebooks
 USER jupyter
-WORKDIR /dtu-denmark/notebooks
+RUN /bin/bash -c "source /miniconda/bin/activate AptaLoop && python -m ipykernel install --user --name AptaLoop --display-name 'Python (AptaLoop)'"
+WORKDIR /dtu-denmark
 EXPOSE 8888
 
 # Run Jupyter
-CMD ["jupyter", "lab", "--allow-root", "--ip=0.0.0.0", "--port=8888"]
+CMD ["/bin/bash", "-c", "source /miniconda/bin/activate AptaLoop && jupyter lab --allow-root --ip=0.0.0.0 --port=8888"]
