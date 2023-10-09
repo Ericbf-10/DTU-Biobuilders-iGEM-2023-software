@@ -27,26 +27,28 @@ RUN apt-get install -y openbabel
 # Install dependencies for building GROMACS
 RUN apt-get update && apt-get install -y build-essential cmake curl
 
-# Download GROMACS source code, change 'version' to the version you need
-RUN curl -O https://ftp.gromacs.org/pub/gromacs/gromacs-version.tar.gz
+# Download GROMACS source code
+RUN curl -O https://ftp.gromacs.org/pub/gromacs/gromacs-2021.4.tar.gz
 
 # Unpack GROMACS source code
-RUN tar -xf gromacs-version.tar.gz
+RUN tar -xf gromacs-2021.4.tar.gz
 
 # Create build directory and move into it
-RUN mkdir /gromacs-version/build
-WORKDIR /gromacs-version/build
+RUN mkdir /gromacs-2021.4/build
+WORKDIR /gromacs-2021.4/build
 
 # Configure and build GROMACS without rdtscp, afterwards cleanup
 RUN cmake .. -DGMX_BUILD_OWN_FFTW=ON -DGMX_USE_RDTSCP=OFF \
     && make \
     && make install \
-    && rm ../../gromacs-version.tar.gz \
-    && rm -rf ../../gromacs-version
+    && rm ../../gromacs-2021.4.tar.gz \
+    && rm -rf ../../gromacs-2021.4
 
-WORKDIR /dtu-denmark
+# Create symbolic link to GROMACS binaries
+RUN ln -s /usr/local/gromacs/bin/gmx /usr/bin/gmx
 
 # Setup Jupyter Notebook
+WORKDIR /dtu-denmark
 RUN useradd -ms /bin/bash jupyter
 RUN chown -R jupyter:jupyter /miniconda/envs/AptaLoop
 RUN chown -R jupyter:jupyter /dtu-denmark/notebooks
