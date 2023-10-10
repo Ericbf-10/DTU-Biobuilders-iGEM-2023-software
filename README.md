@@ -71,7 +71,7 @@ Follow these steps in the terminal:
 1. Finally, you have to copy-paste one of the 2 URLs where you hosted the jupyter lab server (usually the second one works and the first one does not) into your favourite browser. Once you are there, move to the `notebooks` directory, where you have all the notebooks to perform the analysis. When running the notebooks, remember to choose the kernel named `Python (AptaLoop)`. You can do that by clicking to the top right of the notebook, where it says `Python 3 (ipykernel)` and selecting `Python (AptaLoop)`. And that's it, happy coding!
 
 ## Usage
-It is very important that the user selects the kernel `Python (AptaLoop)` when running the notebooks, as it contains the packages needed to run them.
+It is very important that the user selects the kernel `Python (AptaLoop)` when running the notebooks, as it contains the packages needed to run them. We provide an **example** on how to run all the Jupyter notebooks under the `example` directory. However, be aware that the example is just meant to show how to use the NB and what are the inputs/outputs the user should be expecting. The example is NOT designed to produce a scientifically correct or meaningful result. See a detailed description of each NB below.
 
 As mentioned before, the AptaLoop pipeline has 4 modules. The modules are meant to be run sequentially if the user wants to make a thorough analysis of the aptamer-molecule complex interaction and dynamics, but it is also possible to run them individually. Module 1a should be run if the user already has an aptamer sequence they would like to test, and Module 1b should be run if the user wants to create the aptamer sequence from scratch. Each module usage is described below:
 ### Module 1a: Sequence 3d
