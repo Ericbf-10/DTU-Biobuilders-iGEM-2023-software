@@ -1,0 +1,93 @@
+**********************************************************************************************
+                                                                                              
+                     NNNNNNNN        NNNNNNNN        SSSSSSSSSSSSSSS      PPPPPPPPPPPPPPPPP   
+                     N:::::::N       N::::::N      SS:::::::::::::::S     P::::::::::::::::P  
+                     N::::::::N      N::::::N     S:::::SSSSSS::::::S     P::::::PPPPPP:::::P 
+                     N:::::::::N     N::::::N     S:::::S     SSSSSSS     PP:::::P     P:::::P
+                     N::::::::::N    N::::::N     S:::::S                   P::::P     P:::::P
+                     N:::::::::::N   N::::::N     S:::::S                   P::::P     P:::::P
+                     N:::::::N::::N  N::::::N      S::::SSSS                P::::PPPPPP:::::P 
+                     N::::::N N::::N N::::::N       SS::::::SSSSS           P:::::::::::::PP  
+                     N::::::N  N::::N:::::::N         SSS::::::::SS         P::::PPPPPPPPP    
+                     N::::::N   N:::::::::::N            SSSSSS::::S        P::::P            
+                     N::::::N    N::::::::::N                 S:::::S       P::::P            
+                     N::::::N     N:::::::::N                 S:::::S       P::::P            
+                     N::::::N      N::::::::N     SSSSSSS     S:::::S     PP::::::PP          
+                     N::::::N       N:::::::N     S::::::SSSSSS:::::S     P::::::::P          
+                     N::::::N        N::::::N     S:::::::::::::::SS      P::::::::P          
+                     NNNNNNNN         NNNNNNN      SSSSSSSSSSSSSSS        PPPPPPPPPP          
+                                                                                              
+                           Nucleic Acid Prediction method developed by XiaoLab                
+**********************************************************************************************
+Start time: Tue Oct 10 20:38:58 2023
+
+NSP version: 2.0.1
+NSP library path: /home/share/apps/nsp2/lib1
+# Reading sequence
+Seq:CAACTTGGGAGTCTTCCTTAATTGCTC
+# Reading secondary structure
+# Set disused pdbs...
+# Check input
+# Constructing 2D Structure Tree
+# Searching records...
+# Printing records...
+Records searching results:
+SSE(0x299eb00):
+  Loop CATGCTC (())... 1 2 23 24 25 26 27  (21)
+SSE(0x299df70):
+  Helix CAATTG ((())) 1 2 3 22 23 24 (314)
+  Loop AACTTGGCTTAATT ((...(())...)) 2 3 4 5 6 7 8 17 18 19 20 21 22 23  (96)
+SSE(0x299d3f0):
+  Helix GGGATCCT (((()))) 7 8 9 10 15 16 17 18 (449)
+  Loop GAGTCTTC ((....)) 9 10 11 12 13 14 15 16  (225)
+SST (Secondary Structure Tree) : 0x7ffe2fec99b0
+SSE (0x299eb00) : 
+Helix:   
+Loop:  CATGCTC (())... 1 2 23 24 25 26 27 
+SSE (0x299df70) : 
+Helix:  CAATTG ((())) 1 2 3 22 23 24
+Loop:  AACTTGGCTTAATT ((...(())...)) 2 3 4 5 6 7 8 17 18 19 20 21 22 23 
+SSE (0x299d3f0) : 
+Helix:  GGGATCCT (((()))) 7 8 9 10 15 16 17 18
+Loop:  GAGTCTTC ((....)) 9 10 11 12 13 14 15 16 
+
+# SSE: 0x299eb00
+SSE (0x299eb00) : 
+Helix:   
+Loop:  CATGCTC (())... 1 2 23 24 25 26 27 
+# Select template of loop of SSE: 0x299eb00
+# Select template of helix of SSE: 0x299eb00
+# SSE: 0x299df70
+SSE (0x299df70) : 
+Helix:  CAATTG ((())) 1 2 3 22 23 24
+Loop:  AACTTGGCTTAATT ((...(())...)) 2 3 4 5 6 7 8 17 18 19 20 21 22 23 
+# Select template of loop of SSE: 0x299df70
+# Select template of helix of SSE: 0x299df70
+# Select the best match!
+# SSE: 0x299d3f0
+SSE (0x299d3f0) : 
+Helix:  GGGATCCT (((()))) 7 8 9 10 15 16 17 18
+Loop:  GAGTCTTC ((....)) 9 10 11 12 13 14 15 16 
+# Select template of loop of SSE: 0x299d3f0
+# Select template of helix of SSE: 0x299d3f0
+# Select the best match!
+## Score of Templates: 37.6
+## Print Templates.
+0x299eb00 : 1D96-1-loop-2 unknown
+0x299df70 : 6RRD-2-loop-2 4QJU-2-helix-3
+0x299d3f0 : 1AC7-1-loop-1 1OSR-1-helix-4
+## Position Templates.
+## Assemble Templates.
+## Transform.
+## Score of Templates: 32
+## Print Templates.
+0x299eb00 : 6KC8_2-1-loop-2 unknown
+0x299df70 : 3MNN-2-loop-2 4QJU-2-helix-3
+0x299d3f0 : 2A6O_1-3-loop-1 1OSR-1-helix-4
+## Position Templates.
+## Assemble Templates.
+## Transform.
+# Writing sampling structure 2
+End time: Tue Oct 10 20:38:58 2023
+
+Elapsed seconds: 0.706433s

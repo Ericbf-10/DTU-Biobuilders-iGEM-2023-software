@@ -1,0 +1,4 @@
+source leaprc.DNA.OL15
+seq = sequence {DC DA DA DC DT DT DG DG DG DA DG DT DC DT DT DC DC DT DT DA DA DT DT DG DC DT DC }
+savepdb seq sequence.pdb
+quit

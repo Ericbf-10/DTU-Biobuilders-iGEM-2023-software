@@ -1,0 +1,17 @@
+
+                            source leaprc.DNA.OL21
+                            source leaprc.gaff2
+                            
+        
+        
+                loadoff ../../heidelberg_maws/LIG.lib
+		loadamberparams ../../heidelberg_maws/LIG.frcmod 
+                
+                                        CHAIN0 = sequence {DA5 DC DG DG3}
+                                        
+                                        CHAIN1 = sequence {LIG}
+                                        
+                                UNION = combine {CHAIN0 CHAIN1}
+                                saveamberparm UNION out.prmtop out.inpcrd
+                                quit
+                                

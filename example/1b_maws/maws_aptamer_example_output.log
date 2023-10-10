@@ -1,0 +1,27 @@
+MAWS - Making Aptamers With Software
+Active version: 2.0 (released:_2017)
+Computational method: Kullback-Leibler
+Type of aptamer: DNA
+Type of ligand molecule: organic
+Job: maws_aptamer_example
+Input file: ../../heidelberg_maws/pfoa.pdb
+Sample number in initial step: 10
+Sample number per further steps: 10
+Number of further steps: 4 (sequence length = 5)
+Value of beta: 0.01
+Start time: 2023-10-10 15:52:40.418434
+Force field selected for the aptamer: leaprc.DNA.OL21
+Force field selected for the ligand molecule: leaprc.gaff2
+Initialized succesfully!
+2023-10-10 15:55:12.638304: starting initial step for 'G'
+2023-10-10 15:55:14.749925: starting initial step for 'A'
+2023-10-10 15:55:16.923516: starting initial step for 'T'
+2023-10-10 15:55:19.242680: starting initial step for 'C'
+2023-10-10 15:55:21.373712: Completed first step. Selected nucleotide: C
+2023-10-10 15:55:21.373732: Starting further steps to append 4 nucleotides
+2023-10-10 15:58:26.323793: Completed step 2. Selected sequence: C G
+2023-10-10 16:01:32.475637: Completed step 3. Selected sequence: A C G
+2023-10-10 16:04:48.768526: Completed step 4. Selected sequence: A C G G
+2023-10-10 16:04:50.631037: Run completed. Thank you for using MAWS!
+
+Final sequence: A C G G

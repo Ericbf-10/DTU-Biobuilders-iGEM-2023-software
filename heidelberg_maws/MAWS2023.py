@@ -75,7 +75,7 @@ output.write("Value of beta: {0}\n".format(BETA))
 output.write("Start time: {0}\n".format(str(datetime.now())))
 
 #Choose suitable force field file for aptamer
-script_path = os.getcwd()
+script_path = os.path.dirname(os.path.abspath(__file__))
 if ATPAMER_TYPE == "RNA":
 	xml_molecule = XMLStructure(os.path.join(script_path, "RNA.xml")) #Build Structure-object for RNA residues
 	nt_list = "GAUC"
