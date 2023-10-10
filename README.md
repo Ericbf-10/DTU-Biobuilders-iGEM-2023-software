@@ -16,6 +16,16 @@ We decided to use a **Jupyter Notebook** format to make sure that our code is we
 ```
 dtu-denmark
 ├── data
+├── example
+│   ├── 1a_sequence_3d
+│   │   ├── 1_create_sequence_file.ipynb
+│   │   └── 2_aptamer_folding_3dDNA.ipynb
+│   ├── 1b_maws
+│   │   └── maws.ipynb
+│   ├── 2_docking
+│   │   └── docking.ipynb
+│   └── 3_molecular_dynamics
+│       └── molecular_dynamics.ipynb
 ├── heidelberg_maws
 │   └── MAWS2023.py
 ├── notebooks

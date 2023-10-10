@@ -1,4 +1,4 @@
-log started: Tue Oct 10 14:36:38 2023
+log started: Tue Oct 10 15:35:36 2023
 
 Log file: ./leap.log
 >> #
@@ -204,7 +204,7 @@ Log file: ./leap.log
 >> }
 >> 
 >> loadoff DNA.OL15.lib 
-Loading library: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/lib/DNA.OL15.lib
+Loading library: /miniconda/envs/AptaLoop/dat/leap/lib/DNA.OL15.lib
 Loading: DA
 Loading: DA3
 Loading: DA5
@@ -222,11 +222,11 @@ Loading: DT3
 Loading: DT5
 Loading: DTN
 >> parm10 = loadamberparams parm10.dat
-Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/parm10.dat
+Loading parameters: /miniconda/envs/AptaLoop/dat/leap/parm/parm10.dat
 Reading title:
 PARM99 + frcmod.ff99SB + frcmod.parmbsc0 + OL3 for RNA
 >> loadamberparams frcmod.DNA.OL15
-Loading parameters: /zhome/2e/2/164651/miniconda3/envs/maws_p3/dat/leap/parm/frcmod.DNA.OL15
+Loading parameters: /miniconda/envs/AptaLoop/dat/leap/parm/frcmod.DNA.OL15
 Reading force field modification type file (frcmod)
 Reading title:
 OL15 force field for DNA (99bsc0-betaOL1-eps-zetaOL1-chiOL4) see http://ffol.upol.cz
