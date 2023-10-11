@@ -1,2 +1,7 @@
 *.ipynb filter=strip-notebook-output  
-
+example/3_molecular_dynamics/npt.trr filter=lfs diff=lfs merge=lfs -text
+example/3_molecular_dynamics/\#md_python.xtc.2\# filter=lfs diff=lfs merge=lfs -text
+example/3_molecular_dynamics/\#md_python_noPBC.xtc.1\# filter=lfs diff=lfs merge=lfs -text
+example/3_molecular_dynamics/\#md_python_noPBC.xtc.2\# filter=lfs diff=lfs merge=lfs -text
+example/3_molecular_dynamics/\#nvt.xtc.1\# filter=lfs diff=lfs merge=lfs -text
+example/3_molecular_dynamics/\#npt.trr.1\# filter=lfs diff=lfs merge=lfs -text
