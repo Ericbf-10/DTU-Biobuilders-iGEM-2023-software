@@ -67,13 +67,13 @@ If the output you get is ```Docker version X.Y.Z``` (where X, Y and Z are number
 
 Follow these steps in the terminal:
 1. Pull the docker image:
-```docker pull teheavy/dtu-biobuilders-aptaloop:test_new```
+```docker pull teheavy/dtu-biobuilders-aptaloop:production```
 
 1. Then check if you pulled the image correctly:
 ```docker images```
 
-1. If you see **teheavy/dtu-biobuilders-aptaloop:test_new**, it means everything went well. Do the following to run the container:
-```sudo docker run -it -p 8888:8888 teheavy/dtu-biobuilders-aptaloop:test_new```
+1. If you see **teheavy/dtu-biobuilders-aptaloop:production**, it means everything went well. Do the following to run the container:
+```sudo docker run -it -p 8888:8888 teheavy/dtu-biobuilders-aptaloop:production```
 
 1. If everything was as expected, you should be located at `/dtu-denmark`. Run the following to start a jupyter lab server:
 ```jupyter lab --ip=0.0.0.0```
