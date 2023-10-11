@@ -1,0 +1,27 @@
+# This file was created Tue Oct 10 15:24:34 2023
+# Created by:
+#                      :-) GROMACS - gmx energy, 2021.4 (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /dtu-denmark/notebooks/3_molecular_dynamics
+# Command line:
+#   gmx energy -f npt.edr -o pressure.xvg
+# gmx energy is part of G R O M A C S:
+#
+# Great Red Owns Many ACres of Sand 
+#
+@    title "GROMACS Energies"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "(bar)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Pressure"
+    0.000000  -133.865936
+    1.000000  -11.044861
+    2.000000  -124.492699

@@ -1,0 +1,28 @@
+# This file was created Tue Oct 10 15:29:32 2023
+# Created by:
+#                      :-) GROMACS - gmx gyrate, 2021.4 (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /dtu-denmark/notebooks/3_molecular_dynamics
+# Command line:
+#   gmx gyrate -s md_python.tpr -f md_python_noPBC.xtc -o gyrate.xvg
+# gmx gyrate is part of G R O M A C S:
+#
+# Gromacs Runs One Microsecond At Cannonball Speeds
+#
+@    title "Radius of gyration (total and around axes)"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Rg (nm)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Rg"
+@ s1 legend "Rg\sX\N"
+@ s2 legend "Rg\sY\N"
+@ s3 legend "Rg\sZ\N"
+         0     2.11865     1.57071     2.03043     1.54519

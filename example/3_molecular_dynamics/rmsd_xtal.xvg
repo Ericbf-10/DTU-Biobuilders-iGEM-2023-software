@@ -1,0 +1,19 @@
+# This file was created Tue Oct 10 15:29:29 2023
+# Created by:
+#                       :-) GROMACS - gmx rms, 2021.4 (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /dtu-denmark/notebooks/3_molecular_dynamics
+# Command line:
+#   gmx rms -s em.tpr -f md_python_noPBC.xtc -o rmsd_xtal.xvg -tu ns
+# gmx rms is part of G R O M A C S:
+#
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+#
+@    title "RMSD"
+@    xaxis  label "Time (ns)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "System after lsq fit to RNA"
+   0.0000000    2.3362987
