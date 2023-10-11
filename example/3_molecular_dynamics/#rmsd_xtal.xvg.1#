@@ -1,0 +1,39 @@
+# This file was created Tue Oct 10 11:47:26 2023
+# Created by:
+#                       :-) GROMACS - gmx rms, 2021.4 (-:
+# 
+# Executable:   /usr/local/gromacs/bin/gmx
+# Data prefix:  /usr/local/gromacs
+# Working dir:  /dtu-denmark/notebooks/3_molecular_dynamics
+# Command line:
+#   gmx rms -s em.tpr -f md_python_noPBC.xtc -o rmsd_xtal.xvg -tu ns
+# gmx rms is part of G R O M A C S:
+#
+# GROningen Mixture of Alchemy and Childrens' Stories
+#
+@    title "RMSD"
+@    xaxis  label "Time (ns)"
+@    yaxis  label "RMSD (nm)"
+@TYPE xy
+@ subtitle "System after lsq fit to RNA"
+   0.0000000    4.6842809
+   0.0100000    4.7116337
+   0.0200000    4.7423711
+   0.0300000    4.7854223
+   0.0400000    4.8336682
+   0.0500000    4.8742704
+   0.0600000    4.8997111
+   0.0700000    4.9084954
+   0.0800000    4.9340501
+   0.0900000    4.9503007
+   0.1000000    4.9743552
+   0.1100000    5.0176134
+   0.1200000    5.0232396
+   0.1300000    5.0479360
+   0.1400000    5.0508413
+   0.1500000    5.0866604
+   0.1600000    5.0826101
+   0.1700000    5.1199255
+   0.1800000    5.1487770
+   0.1900000    5.1645627
+   0.2000000    5.1462660

@@ -1,17 +1,17 @@
 ;
 ;	File 'mdout.mdp' was generated
-;	By user: unknown (0)
-;	On host: LAPTOP-QS8N03GE
-;	At date: Fri Sep 15 02:59:19 2023
+;	By user: unknown (1001)
+;	On host: cc79e0a485fa
+;	At date: Tue Oct 10 15:24:38 2023
 ;
 ;	Created by:
-;	             :-) GROMACS - gmx grompp, 2021.4-Ubuntu-2021.4-2 (-:
+;	                     :-) GROMACS - gmx grompp, 2021.4 (-:
 ;	
-;	Executable:   /usr/bin/gmx
-;	Data prefix:  /usr
-;	Working dir:  /mnt/c/Users/Anu/Desktop/docking/dynamics/dtu-denmark/notebooks/Dynamics
+;	Executable:   /usr/local/gromacs/bin/gmx
+;	Data prefix:  /usr/local/gromacs
+;	Working dir:  /dtu-denmark/notebooks/3_molecular_dynamics
 ;	Command line:
-;	  gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_0_2.tpr
+;	  gmx grompp -f md.mdp -c npt.gro -t npt.cpt -p topol.top -o md_python.tpr
 
 ; VARIOUS PREPROCESSING OPTIONS
 ; Preprocessor information: use cpp syntax.
@@ -25,7 +25,7 @@ integrator               = md
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-nsteps                   = 1000000
+nsteps                   = 1000
 ; For exact run continuation or redoing part of a run
 init-step                = 0
 ; Part index is updated automatically on checkpointing (keeps files separate)
