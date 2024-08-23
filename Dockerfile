@@ -51,10 +51,8 @@ RUN ln -s /usr/local/gromacs/bin/gmx /usr/bin/gmx
 WORKDIR /dtu-denmark
 RUN useradd -ms /bin/bash jupyter
 RUN chown -R jupyter:jupyter /miniconda/envs/AptaLoop
-RUN chown -R jupyter:jupyter /dtu-denmark/notebooks
-RUN chown -R jupyter:jupyter /dtu-denmark/example
-RUN chmod 777 /dtu-denmark/notebooks
-RUN chmod 777 /dtu-denmark/example
+RUN chown -R jupyter:jupyter /dtu-denmark
+RUN chmod -R 777 /dtu-denmark
 USER jupyter
 RUN /bin/bash -c "source /miniconda/bin/activate AptaLoop && python -m ipykernel install --user --name AptaLoop --display-name 'Python (AptaLoop)'"
 WORKDIR /dtu-denmark
