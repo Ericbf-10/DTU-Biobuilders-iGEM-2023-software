@@ -298,9 +298,20 @@ aptamer = result_complex.chains[0]
 aptamer.create_sequence(best_sequence)
 result_complex.build()
 result_complex.positions = best_positions[:]
-pdb_result = open("{0}_RESULT.pdb".format(JOB_NAME),"w")
+pdb_out_name = f"{JOB_NAME}_RESULT.pdb"
+pdb_result = open(f"{pdb_out_name}","w")
 app.PDBFile.writeModel(result_complex.topology, result_complex.positions, file=pdb_result)
 pdb_result.close()
+
+# Write output ready for GROMACS
+pdb_out_name2 = f"{JOB_NAME}_RESULT_GROMACS.pdb"
+if ATPAMER_TYPE == "RNA":
+	cmd = f'''awk '{{printf "%-6s%5s %4s %-3s %1s %4s    %8.3f%8.3f%8.3f  %5.2f %5.2f           %2s\\n", $1, $2, $3, ($4 != "LIG" ? "R"$4 : $4), $5, $6, $7, $8, $9, $10, $11, $12}}' {pdb_out_name} > {pdb_out_name2}'''
+elif ATPAMER_TYPE == "DNA":
+	cmd = f'''cp {pdb_out_name} {pdb_out_name2}'''
+
+# Execute the command
+subprocess.run(cmd, shell=True, check=True)
 
 output.write("{0}: Run completed. Thank you for using MAWS!\n\n".format(str(datetime.now())))
 output.write("Final sequence: {0}\n".format(best_sequence))
