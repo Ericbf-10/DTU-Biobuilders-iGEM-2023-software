@@ -13,7 +13,7 @@ RUN /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/instal
 ENV PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
 
 # Download code from gitlab
-RUN git clone https://gitlab.igem.org/2023/software-tools/dtu-denmark.git
+RUN git clone https://github.com/Ericbf-10/DTU-Biobuilders-iGEM-2023-software
 
 # Create AptaLoop environment and activate
 RUN conda env create --file dtu-denmark/environment.yml
