@@ -16,7 +16,7 @@ ENV PATH="/home/linuxbrew/.linuxbrew/bin:${PATH}"
 RUN git clone https://github.com/Ericbf-10/DTU-Biobuilders-iGEM-2023-software
 
 # Create AptaLoop environment and activate
-RUN conda env create --file dtu-denmark/environment.yml
+RUN conda env create --file DTU-Biobuilders-iGEM-2023-software/environment.yml
 
 # Install AutoDock Vina for docking simulation
 RUN apt-get update && apt-get install -y autodock-vina
@@ -48,14 +48,14 @@ RUN cmake .. -DGMX_BUILD_OWN_FFTW=ON -DGMX_USE_RDTSCP=OFF \
 RUN ln -s /usr/local/gromacs/bin/gmx /usr/bin/gmx
 
 # Setup Jupyter Notebook
-WORKDIR /dtu-denmark
+WORKDIR /DTU-Biobuilders-iGEM-2023-software
 RUN useradd -ms /bin/bash jupyter
 RUN chown -R jupyter:jupyter /miniconda/envs/AptaLoop
-RUN chown -R jupyter:jupyter /dtu-denmark
-RUN chmod -R 777 /dtu-denmark
+RUN chown -R jupyter:jupyter /DTU-Biobuilders-iGEM-2023-software
+RUN chmod -R 777 /DTU-Biobuilders-iGEM-2023-software
 USER jupyter
 RUN /bin/bash -c "source /miniconda/bin/activate AptaLoop && python -m ipykernel install --user --name AptaLoop --display-name 'Python (AptaLoop)'"
-WORKDIR /dtu-denmark
+WORKDIR /DTU-Biobuilders-iGEM-2023-software
 EXPOSE 8888
 
 # Run Jupyter
