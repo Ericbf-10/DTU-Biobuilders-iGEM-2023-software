@@ -29,6 +29,7 @@ from openmm import unit
 from openmm import app
 import Space
 import os
+import subprocess
 
 #Parser
 parser = argparse.ArgumentParser()
